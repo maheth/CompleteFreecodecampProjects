@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form | Project Freecodecamp</title>
+</head>
+<body> 
+    <header>
+<h1 id="title">Bootcamp Survey Form</h1>
+<p id="description">Bootcamp Feedback</p>
+</header>
+
+<section id="container">
+        
+        
+<img src="moutains.png" alt="illustration of mountains and nature">
+<form action="#" id="survey-form" method="POST">
+    <div class="personal">
+    <label for="name" id="name-label">What is your name? </label>
+   <p> <input type="text" id="name" name="name" placeholder="Please enter your name" required></p>
+</div>
+<div class="emails">
+    <label for="email" id="email-label">What is your email address? </label>
+    <p><input type="email" id="email" name="email" placeholder="Please enter your email address" required></p>
+</div>
+<div class="age">
+    <label for="number" id="number-label">What is your age? </label>
+    <p> <input type="number" id="number" min="0" max="100" placeholder="Please enter your age" required></p>
+</div>
+<div class="choose">
+<label for="dropdown">What is your current profession?</label>
+<p><select id="dropdown">
+    <option>Student</option>
+    <option>Freelancer</option>
+    <option>Salaried Employee</option>
+    <option>Business Owner</option>
+</select></p>
+
+</div>
+
+
+<div class="refer">
+<label for="radio">Would you recommend this bootcamp to others?</label>
+<p><label>
+    <input type="radio" name="refer" value="Yes"> Yes
+</label></p>
+<p><label>
+<input type="radio" name="refer" value="No"> No
+    </label></p>
+</div>  
+
+<div class="check">
+<label for="checkboxes">What do you like the most about the bootcamp?
+    </label>
+   <p> <label>
+<input type="checkbox" value="projects"> Projects
+</label>
+<label>
+        <input type="checkbox" value="teambuilding"> Team Building
+        </label>
+<label>
+<input type="checkbox" value="interview"> Interview Tests
+</label>
+</p>
+</div>
+<label for="comment">Please provide any additional comments you have for us to improve our bootcamps</label>
+<p><textarea name="feedback" id="comment" cols="50" rows="10" placeholder="Enter your text">
+
+</textarea></p>
+<button id="submit" value="Submit">Submit</button>
+</form> 
+
+</section>
+
+
+    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

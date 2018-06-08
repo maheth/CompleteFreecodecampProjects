@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300');
+
+body {
+
+    background-image: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4e58a56fd7bd17453e3cf914aa365870&auto=format&fit=crop&w=750&q=80g");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+/*   Setting flexbox   */
+}
+
+#main {
+  background: rgba(0, 0, 0, 0.627);
+   
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2%;
+    border: 1px solid white;
+    padding: 1%;
+    color: #ebdee7;
+    font-family: Sunflower;
+    font-size: 0.9em;
+
+    margin: 5%;
+    opacity: 0;
+    animation-name: Appear;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes Appear {
+    0% {opacity: 0;}
+   
+    100% {opacity: 1;}
+}
+
+
+
+/*Setting styles*/
+
+#img-div {
+   flex: 0 0 300px;
+   text-align: center;
+    
+}
+
+#img-caption {
+    margin-top: 2%;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.8;
+  
+  
+}
+
+
+#title {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-family: "Exo 2"
+}
+
+a {
+    color: orangered;
+    text-decoration: none;
+}
+
+blockquote {
+    font-size: 1.2em;
+    text-align: center;
+    color: orange;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 580px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2%;
+    }
+}

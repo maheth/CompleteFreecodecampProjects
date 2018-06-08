@@ -1,0 +1,158 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300');
+
+
+/* Setting basic styles */
+
+
+body {
+    
+    font-family: Sunflower, Helvetica, sans-serif;
+    background: url("/moutains.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+header { text-align: center;}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background-size: cover;
+
+    
+    
+
+}
+
+/* Setting flexbox styles */
+
+#container {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    background: whitesmoke;
+    max-width: 600px;
+    align-content: center;
+    margin: 0 auto;
+    border: 5px solid rgb(190, 174, 173);
+    border-radius: 5px;
+    
+}
+
+
+/* Setting form styles */
+
+form {
+    padding:2%;
+    margin: 2%;
+}
+
+label {
+    margin-top: 5%;
+}
+
+input[type="text"] { 
+    border: none;
+    width: 60%;
+    background: transparent;
+    border-bottom: 1px solid; 
+    font-size: 0.9em;
+    padding: 1% 2% 1% 0;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-bottom: 1px solid #9BCC65;
+}
+input[type="email"] {
+    width: 60%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid; 
+    font-size: 0.9em;
+    padding: 1% 2% 1% 0;
+
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-bottom: 1px solid #9BCC65;
+}
+
+input[type="number"] {
+    width: 30%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid black; 
+    font-size: 0.9em;
+    padding: 1% 0 1% 0;
+
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-bottom: 1px solid #9BCC65;
+}
+
+select {
+    
+    padding: 1% 2% 1% 1%;
+    border: none;
+    outline: none;
+color: whitesmoke;
+    background-color: #5A8999;
+}
+
+textarea {
+    padding: 1% 2% 1% 1%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+   
+    color: gray;
+}
+
+textarea:focus {
+    border-color: #9BCC65;
+}
+
+button {
+    background: #7096CE;
+    color: white;
+    padding: 2%;
+    border: none;
+    cursor: pointer;
+};
+
+
+/* Responsive Layout */
+
+@media (min-width: 600px) {
+    #container {
+              
+        display: flex;
+        flex-direction: column;
+        
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+        
+          
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+}
+
+
+
