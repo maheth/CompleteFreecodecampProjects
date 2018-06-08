@@ -61,7 +61,7 @@ label {
 
 input[type="text"] { 
     border: none;
-    width: 60%;
+    width: 180px;
     background: transparent;
     border-bottom: 1px solid; 
     font-size: 0.9em;
@@ -73,7 +73,7 @@ input[type=text]:focus {
     border-bottom: 1px solid #9BCC65;
 }
 input[type="email"] {
-    width: 60%;
+    width: 180px;
     border: none;
     background: transparent;
     border-bottom: 1px solid; 
@@ -88,7 +88,7 @@ input[type="email"]:focus {
 }
 
 input[type="number"] {
-    width: 30%;
+   width: 180px;
     border: none;
     background: transparent;
     border-bottom: 1px solid black; 
@@ -111,9 +111,13 @@ color: whitesmoke;
     background-color: #5A8999;
 }
 
+
+
+
 textarea {
     
 max-width: 100%;
+resize: none;
     border: 2px solid #ccc;
     border-radius: 4px;
     color: rgb(53, 51, 51);
@@ -161,4 +165,6 @@ button {
 }
 
 
-
+input[type="text"], input[type="email"], input[type="number"], {
+    width: 100%;
+}
