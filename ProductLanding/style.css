@@ -24,6 +24,7 @@ text-decoration: none;}
 
 header { 
 display: flex; 
+flex-direction: row;
 
 }
 
@@ -32,7 +33,7 @@ display: flex;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-width: 40vw;
+width: 300px;
 
 
 }
