@@ -1,5 +1,10 @@
-body {  
-  font-family: ‘Lobster Two’, sans-serif;
-  color: blue;
-  
-  }
+/* Global CSS Variables */
+
+:root {
+ --cloud-color: #6196F7;
+ --black-board: #565656;
+ --dusty-sand: #DACAB4;
+ --pure-white: #FFFFFF;
+ --red-berry: #D11F53;
+ 
+}
