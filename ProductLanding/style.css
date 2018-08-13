@@ -23,12 +23,14 @@ li { list-style: none; }
 text-decoration: none;}
 
 
+header { display: flex; }
+
 .navigation {
 
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-width: 300px;
+width: 30vw;
 
 
 }
