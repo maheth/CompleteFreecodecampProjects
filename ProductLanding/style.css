@@ -25,7 +25,7 @@ text-decoration: none;}
 
 header { display: flex; }
 
-.navigation {
+.navbar {
 
 display: flex;
 flex-direction: row;
