@@ -1,69 +1,108 @@
 /* Global CSS Variables */
 
 :root {
- --cloud-color: #6196F7;
- --black-board: #565656;
- --dusty-sand: #DACAB4;
- --pure-white: #FFFFFF;
- --red-berry: #D11F53;
- 
+	--cloud-color: #6196F7;
+	--black-board: #565656;
+	--dusty-sand: #DACAB4;
+	--pure-white: #FFFFFF;
+	--red-berry: #D11F53;
 }
 
-* { margin: 0;
-padding: 0;
-box-sizing: border-box;
-
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
 }
+
+
 
 
 /* navigation styles */
 
-li { list-style: none; }
-.nav-link { color: var(--cloud-color); 
-text-decoration: none;}
-
-
-header { display: flex;
-font-family: 'Exo 2'; }
-
-.navbar {
-
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-width: 30vw;
-margin-top: 7%;
-
+li {
+	list-style: none;
 }
 
+.nav-link {
+	color: var(--cloud-color);
+	text-decoration: none;
+}
+
+header {
+	display: flex;
+	font-family: 'Exo 2';
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 30vw;
+	margin-top: 7%;
+}
 
 /* Introduction section styles */
 
-
-.introduction { display: flex;
-font-family: 'Exo 2';
-color: var(--black-board);
-}
-
-.intro { display: flex; 
-flex-direction: column;
-height: 300px;
-width: 600px;
-justify-content: center;
-margin-left: 5%;
-
-}
-
-
-.intro > h1 {
+.introduction {
+	display: flex;
+	font-family: 'Exo 2';
+	color: var(--black-board);
 	
-font-size: 2.5em;
-padding-bottom: 2%;
 }
 
-.intro h1 span { color: var(--cloud-color);}
+.intro {
+	display: flex;
+	flex-direction: column;
+	height: 500px;
+	width: 600px;
+	justify-content: center;
+	margin-left: 5%;
+}
 
-.intro > h4 {
+.intro>h1 {
+	font-size: 2.5em;
+	padding-bottom: 2%;
+}
+
+.intro h1 span {
+	color: var(--cloud-color);
+}
+
+.intro>h4 {
 	font-size: 1.5em;
 	font-weight: 400;
 }
+
+/* Styles for Bladeless Fan and Cloud animation */
+
+.Bladeless {
+	position: absolute;
+	left: 500px;
+top: 70px;
+
+}
+
+.airanimate {
+	
+	width: 400px;
+}
+
+.airanimate {
+
+	animation-name: airways;
+    animation-duration: 4s;
+	animation-delay: -2s;
+	animation-iteration-count: infinite;
+
+} 
+
+@keyframes airways {
+	0% { opacity: 0;}
+	50% {opacity: 1; transform: translate(40px, 0px);}
+	80% {opacity: 1; transform: translate(-20px, 0px);}
+	100% { opacity: 0;}
+	
+
+
+} 
