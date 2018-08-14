@@ -1,7 +1,7 @@
 /* Global CSS Variables */
 
 :root {
-	--cloud-color: #6196F7;
+	--cloud-color: #6196F8;
 	--black-board: #565656;
 	--dusty-sand: #DBCBB5;
 	--pure-white: #FFFFFF;
@@ -30,11 +30,10 @@ li {
 }
 
 header {
-display: flex;
+	display: flex;
 	font-family: 'Exo 2';
 	position: fixed;
 	background-color: var(--pure-white);
-	
 }
 
 .navbar {
@@ -131,7 +130,8 @@ input[type=email] {
 	box-sizing: border-box;
 }
 
-input[type=email], input[type=submit]:focus {
+input[type=email],
+input[type=submit]:focus {
 	border: none;
 }
 
@@ -157,4 +157,44 @@ input[type=submit]:hover {
 	height: 45px;
 	margin-left: 1%;
 	border: none;
+}
+
+/* styling second section */
+
+#Features {
+	display: flex;
+	margin-top: 10%;
+	height: 903px;
+}
+
+.firstfeature {
+	position: absolute;
+	display: flex;
+	width: 283px;
+	height: 483px;
+	left: 680px;
+	top: 850px;
+	text-align: center;
+	align-items: center;
+	font-size: 2.5em;
+	color: var(--black-board);
+	background: var(--cloud-color);
+	box-shadow: 0px 6px 10px rgba(86, 86, 86, 0.5);
+}
+
+.secondfeature {
+	
+	position: absolute;
+	display: flex;
+	width: 283px;
+	height: 483px;
+	left: 963px;
+	top: 1000px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5em;
+	color: var(--black-board);
+	background: var(--dusty-sand);
+	box-shadow: 0px 6px 10px rgba(86, 86, 86, 0.5);
 }
