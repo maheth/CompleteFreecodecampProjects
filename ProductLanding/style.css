@@ -3,7 +3,7 @@
 :root {
 	--cloud-color: #6196F7;
 	--black-board: #565656;
-	--dusty-sand: #DACAB4;
+	--dusty-sand: #DBCBB5;
 	--pure-white: #FFFFFF;
 	--red-berry: #D11F53;
 }
@@ -12,11 +12,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
 }
 
-
-
+body {
+	font-family: 'Exo 2';
+}
 
 /* navigation styles */
 
@@ -30,8 +30,11 @@ li {
 }
 
 header {
-	display: flex;
+display: flex;
 	font-family: 'Exo 2';
+	position: fixed;
+	background-color: var(--pure-white);
+	
 }
 
 .navbar {
@@ -48,20 +51,19 @@ header {
 	display: flex;
 	font-family: 'Exo 2';
 	color: var(--black-board);
-	
 }
 
 .intro {
 	display: flex;
 	flex-direction: column;
-	height: 500px;
-	width: 600px;
+	height: 600px;
+	width: 550px;
 	justify-content: center;
-	margin-left: 5%;
+	margin-left: 2%;
 }
 
 .intro>h1 {
-	font-size: 2.5em;
+	font-size: 3.5em;
 	padding-bottom: 2%;
 }
 
@@ -79,30 +81,80 @@ header {
 .Bladeless {
 	position: absolute;
 	left: 500px;
-top: 70px;
-
+	top: 80px;
 }
 
 .airanimate {
-	
 	width: 400px;
 }
 
 .airanimate {
-
 	animation-name: airways;
-    animation-duration: 4s;
+	animation-duration: 4s;
 	animation-delay: -2s;
 	animation-iteration-count: infinite;
-
-} 
+}
 
 @keyframes airways {
-	0% { opacity: 0;}
-	50% {opacity: 1; transform: translate(40px, 0px);}
-	80% {opacity: 1; transform: translate(-20px, 0px);}
-	100% { opacity: 0;}
-	
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: translate(40px, 0px);
+	}
+	80% {
+		opacity: 1;
+		transform: translate(-20px, 0px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
+/* Styling forms */
 
-} 
+#form {
+	margin-top: 12%;
+}
+
+input[type=email] {
+	width: 350px;
+	height: 50px;
+	padding-left: 5%;
+	background-color: var(--dusty-sand);
+	border-radius: 30px;
+	border: transparent;
+	color: var(--black-board);
+	font-family: 'Exo 2';
+	font-size: 1em;
+	box-sizing: border-box;
+}
+
+input[type=email], input[type=submit]:focus {
+	border: none;
+}
+
+input[type=submit] {
+	width: 100px;
+	height: 35px;
+	position: relative;
+	right: 20%;
+	box-sizing: border-box;
+	background-color: var(--cloud-color);
+	border-radius: 40px;
+	border: transparent;
+	color: var(--dusty-sand);
+	font-family: 'Exo 2';
+	font-size: 0.8em;
+	font-weight: 700;
+	cursor: pointer;
+	transition: height 2s margin-left 3s;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	height: 45px;
+	margin-left: 1%;
+	border: none;
+}
