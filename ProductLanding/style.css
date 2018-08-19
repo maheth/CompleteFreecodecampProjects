@@ -33,8 +33,14 @@ header {
 	display: flex;
 	font-family: 'Exo 2';
 	position: fixed;
+	justify-content: flex-start;
+	width: 100%;
+	top: 0;
+	overflow: hidden;
 	background-color: var(--pure-white);
 }
+
+
 
 .navbar {
 	display: flex;
@@ -46,10 +52,15 @@ header {
 
 /* Introduction section styles */
 
+
+
+
+
 .introduction {
 	display: flex;
 	font-family: 'Exo 2';
 	color: var(--black-board);
+	margin-top: 90px;
 }
 
 .intro {
@@ -62,7 +73,7 @@ header {
 }
 
 .intro>h1 {
-	font-size: 3.5em;
+	font-size: 3em;
 	padding-bottom: 2%;
 }
 
@@ -78,9 +89,9 @@ header {
 /* Styles for Bladeless Fan and Cloud animation */
 
 .Bladeless {
-	position: absolute;
+	
 	left: 500px;
-	top: 80px;
+	top: 150px;
 }
 
 .airanimate {
@@ -136,7 +147,7 @@ input[type=submit]:focus {
 }
 
 input[type=submit] {
-	width: 100px;
+	width: 89px;
 	height: 35px;
 	position: relative;
 	right: 20%;
@@ -163,17 +174,16 @@ input[type=submit]:hover {
 
 #Features {
 	display: flex;
-	margin-top: 10%;
 	height: 903px;
+	margin-top: -10%;
 }
 
 .firstfeature {
-	position: absolute;
+	
 	display: flex;
 	width: 283px;
 	height: 483px;
-	left: 680px;
-	top: 850px;
+margin-top: 10%;
 	text-align: center;
 	align-items: center;
 	font-size: 2.5em;
@@ -184,12 +194,10 @@ input[type=submit]:hover {
 
 .secondfeature {
 	
-	position: absolute;
 	display: flex;
 	width: 283px;
 	height: 483px;
-	left: 963px;
-	top: 1000px;
+margin-top: 20%;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -225,9 +233,7 @@ input[type=submit]:hover {
 	justify-content: center;
 	background-color: var(--cloud-color);
 	opacity: 0.8;
-
 }
-
 
 /* Stying for the fourth section of the page which is pricing */
 
@@ -242,65 +248,56 @@ input[type=submit]:hover {
 
 .prices {
 	display: flex;
-		justify-content: space-around;
+	justify-content: space-around;
 }
 
-
 .pricebox {
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
 	align-items: center;
-width: 310px;
-height: 401px;
-background: rgba(219, 203, 181, 0.8);
-box-shadow: 4px 4px 0px rgba(219, 203, 181, 0.1);
-margin-bottom: 10%;
-
+	width: 310px;
+	height: 401px;
+	background: rgba(219, 203, 181, 0.8);
+	box-shadow: 4px 4px 0px rgba(219, 203, 181, 0.1);
+	margin-bottom: 10%;
 }
 
-.pricebox > h3 {
-
-font-family: 'Exo 2';
-font-weight: 500;
-padding: 10%;
-font-size: 24px;
-text-align: center;
-text-transform: capitalize;
-color: var(--black-board);
+.pricebox>h3 {
+	font-family: 'Exo 2';
+	font-weight: 500;
+	padding: 10%;
+	font-size: 24px;
+	text-align: center;
+	text-transform: capitalize;
+	color: var(--black-board);
 }
 
-.pricebox > p {
-font-family: 'Exo 2';
-font-weight: 500;
-line-height: normal;
-font-size: 96px;
-padding: 10%;
-text-align: center;
-text-transform: capitalize;
-color: var(--red-berry);
+.pricebox>p {
+	font-family: 'Exo 2';
+	font-weight: 500;
+	line-height: normal;
+	font-size: 96px;
+	padding: 10%;
+	text-align: center;
+	text-transform: capitalize;
+	color: var(--red-berry);
 }
 
-.pricebox > button {
-position: relative;
-width: 196px;
-height: 64px;
-margin-bottom: 10%;
-color: var(--dusty-sand);
-text-align: center;
-background-color: var(--cloud-color);
-border-radius: 30px;
-font-family: 'Exo 2';
-border-color: transparent;
-font-weight: 500;
-line-height: normal;
-font-size: 36px;
-text-align: center;
-cursor: pointer;
-
-
+.pricebox>button {
+	position: relative;
+	width: 196px;
+	height: 64px;
+	margin-bottom: 10%;
+	color: var(--dusty-sand);
+	text-align: center;
+	background-color: var(--cloud-color);
+	border-radius: 30px;
+	font-family: 'Exo 2';
+	border-color: transparent;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 36px;
+	text-align: center;
+	cursor: pointer;
 }
-
-
