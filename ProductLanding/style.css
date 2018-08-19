@@ -227,3 +227,80 @@ input[type=submit]:hover {
 	opacity: 0.8;
 
 }
+
+
+/* Stying for the fourth section of the page which is pricing */
+
+.stitle {
+	display: flex;
+	justify-content: center;
+	font-size: 2em;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	color: var(--cloud-color);
+}
+
+.prices {
+	display: flex;
+		justify-content: space-around;
+}
+
+
+.pricebox {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	align-items: center;
+width: 310px;
+height: 401px;
+background: rgba(219, 203, 181, 0.8);
+box-shadow: 4px 4px 0px rgba(219, 203, 181, 0.1);
+margin-bottom: 10%;
+
+}
+
+.pricebox > h3 {
+
+font-family: 'Exo 2';
+font-weight: 500;
+padding: 10%;
+font-size: 24px;
+text-align: center;
+text-transform: capitalize;
+color: var(--black-board);
+}
+
+.pricebox > p {
+font-family: 'Exo 2';
+font-weight: 500;
+line-height: normal;
+font-size: 96px;
+padding: 10%;
+text-align: center;
+text-transform: capitalize;
+color: var(--red-berry);
+}
+
+.pricebox > button {
+position: relative;
+width: 196px;
+height: 64px;
+margin-bottom: 10%;
+color: var(--dusty-sand);
+text-align: center;
+background-color: var(--cloud-color);
+border-radius: 30px;
+font-family: 'Exo 2';
+border-color: transparent;
+font-weight: 500;
+line-height: normal;
+font-size: 36px;
+text-align: center;
+cursor: pointer;
+
+
+}
+
+
