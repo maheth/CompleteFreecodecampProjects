@@ -18,6 +18,11 @@ body {
 	font-family: 'Exo 2';
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* navigation styles */
 
 li {
@@ -29,45 +34,38 @@ li {
 	text-decoration: none;
 }
 
-header {
+#header {
 	display: flex;
 	font-family: 'Exo 2';
 	position: fixed;
-	justify-content: flex-start;
 	width: 100%;
 	top: 0;
 	overflow: hidden;
 	background-color: var(--pure-white);
 }
 
-
-
 .navbar {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 	width: 30vw;
-	margin-top: 7%;
+	margin-top: 6%;
 }
 
 /* Introduction section styles */
-
-
-
-
 
 .introduction {
 	display: flex;
 	font-family: 'Exo 2';
 	color: var(--black-board);
-	margin-top: 90px;
+	margin-top: 10%;
 }
 
 .intro {
 	display: flex;
 	flex-direction: column;
-	height: 600px;
-	width: 550px;
+	align-self: flex-start;
+	height: 100%;
+	width: 65%;
 	justify-content: center;
 	margin-left: 2%;
 }
@@ -88,14 +86,19 @@ header {
 
 /* Styles for Bladeless Fan and Cloud animation */
 
+#noanimate {
+	display: none;
+	width: 100%;
+	height: auto;
+}
+
 .Bladeless {
-	
-	left: 500px;
-	top: 150px;
+	left: 50%;
+	top: 10%;
 }
 
 .airanimate {
-	width: 400px;
+	width: 40%;
 }
 
 .airanimate {
@@ -125,11 +128,11 @@ header {
 /* Styling forms */
 
 #form {
-	margin-top: 12%;
+	margin-top: 10%;
 }
 
 input[type=email] {
-	width: 350px;
+	width: 75%;
 	height: 50px;
 	padding-left: 5%;
 	background-color: var(--dusty-sand);
@@ -147,7 +150,7 @@ input[type=submit]:focus {
 }
 
 input[type=submit] {
-	width: 89px;
+	width: 18%;
 	height: 35px;
 	box-sizing: border-box;
 	margin-left: -20%;
@@ -171,18 +174,23 @@ input[type=submit]:hover {
 
 /* styling second section */
 
+#Features>.stitle {
+	display: none;
+	
+}
+
 #Features {
 	display: flex;
-	height: 903px;
+	align-items: center;
+	height: 80%;
 	margin-top: -10%;
 }
 
 .firstfeature {
-	
-	display: flex;
+	align-self: center;
 	width: 283px;
 	height: 483px;
-margin-top: 10%;
+	margin-top: 10%;
 	text-align: center;
 	align-items: center;
 	font-size: 2.5em;
@@ -192,11 +200,10 @@ margin-top: 10%;
 }
 
 .secondfeature {
-	
-	display: flex;
+	align-self: center;
 	width: 283px;
 	height: 483px;
-margin-top: 20%;
+	margin-top: 25%;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -206,11 +213,17 @@ margin-top: 20%;
 	box-shadow: 0px 6px 10px rgba(86, 86, 86, 0.5);
 }
 
+.firstfeature h3,
+.secondfeature h3 {
+	margin-top: 50%;
+}
+
 /* Styling the third section for the video */
 
 .vtitle {
 	display: flex;
 	justify-content: center;
+	margin-top: 5%;
 	font-size: 2em;
 	color: var(--black-board);
 }
@@ -225,20 +238,18 @@ margin-top: 20%;
 }
 
 .editvideo {
-	margin-top: 10%;
+	margin-top: 5%;
 	height: 450px;
-	width: 800px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
-	background-color: var(--cloud-color);
 	opacity: 0.8;
 }
 
 /* Stying for the fourth section of the page which is pricing */
 
 .stitle {
-	display: flex;
-	justify-content: center;
+	text-align: center;
 	font-size: 2em;
 	margin-top: 5%;
 	margin-bottom: 5%;
@@ -255,8 +266,8 @@ margin-top: 20%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 310px;
-	height: 401px;
+	width: 280px;
+	height: 400px;
 	background: rgba(219, 203, 181, 0.8);
 	box-shadow: 4px 4px 0px rgba(219, 203, 181, 0.1);
 	margin-bottom: 10%;
@@ -285,7 +296,7 @@ margin-top: 20%;
 
 .pricebox>button {
 	position: relative;
-	width: 196px;
+	width: 85%;
 	height: 64px;
 	margin-bottom: 10%;
 	color: var(--dusty-sand);
@@ -296,7 +307,7 @@ margin-top: 20%;
 	border-color: transparent;
 	font-weight: 500;
 	line-height: normal;
-	font-size: 36px;
+	font-size: 2.2em;
 	text-align: center;
 	cursor: pointer;
 }
@@ -310,6 +321,122 @@ margin-top: 20%;
 	padding: 2%;
 	font-family: 'Exo 2';
 	font-weight: 500;
-	font-size: 26px;
+	font-size: 2em;
 	color: var(--dusty-sand);
+}
+
+/* Media Queries for Responsive */
+
+/* navigation styles */
+
+@media screen and (max-width: 478px) {
+
+.navbar {
+	flex-direction: column;
+	align-items: flex-end;
+	
+	font-size: 0.8em;
+width: 250px;
+}
+
+/* Introduction section styles */
+
+.introduction {
+	margin-top: 20%;
+}
+
+.intro>h1 {
+	font-size: 1.5em;
+	width: 150%;
+}
+
+.intro>h4 {
+ font-size: 0.8em;
+ width: 150%;
+}
+
+
+/* Styles for Bladeless Fan and Cloud animation */
+
+.Bladeless svg {
+	width: 250px;
+	height: 250px;
+	margin-left: 30%;
+	
+}
+
+/* Styling forms */
+input[type=email] {
+	width: 75%;
+	height: 30px;
+	border-radius: 30px;
+	font-size: 0.5em;
+	text-align: center;
+	padding-left: 1%;
+}
+
+input[type=submit] {
+	width: 35%;
+	height: 25px;
+	
+	margin-left: 20%;
+	margin-top: 5%;
+	
+	border-radius: 10px;
+	font-size: 0.2em;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	height: 25px;
+	margin-right: -1%;
+	border: none;
+}
+
+/* Second section of the page */
+#Features img {
+	display: none;
+}
+
+#Features>h4 {
+	font-size: 1em;
+	
+}
+
+#Features {
+	flex-direction: row;
+	margin-left: 10%;
+	margin-top: -20%;
+
+}
+
+.firstfeature {
+	align-self: center;
+	width: 140px;
+	height: 240px;
+	margin-top: 25%;
+	margin-left: 10%;
+	text-align: center;
+	align-items: center;
+	font-size: 1em;
+
+}
+
+.secondfeature {
+	align-self: center;
+	width: 140px;
+	height: 240px;
+	margin-top: 45%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+
+}
+
+.firstfeature h3,
+.secondfeature h3 {
+	margin-top: 50%;
+}
+
 }
