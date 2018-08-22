@@ -329,7 +329,7 @@ input[type=submit]:hover {
 
 /* navigation styles */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 480px) {
 
 .navbar {
 	flex-direction: row;
@@ -343,7 +343,7 @@ margin-top: 15%;
 
 .introduction {
 	margin-top: 20%;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .intro>h1 {
@@ -360,9 +360,7 @@ margin-top: 15%;
 /* Styles for Bladeless Fan and Cloud animation */
 
 .Bladeless svg {
-	width: 100px;
-	height: 200px;
-	margin-left: -65%;
+display:none;
 	
 }
 
@@ -400,7 +398,7 @@ input[type=submit]:hover {
 }
 
 #Features>.stitle {
-	font-size: 2em;
+	font-size: 1.2em;
 	display: flex;
 	align-self: center;
 	
@@ -416,24 +414,25 @@ input[type=submit]:hover {
 
 .firstfeature {
 	align-self: flex-start;
-	width: 140px;
-	height: 200px;
+	width: 100px;
+	height: 150px;
 	margin-top: 25%;
-	margin-left: 10%;
+	margin-left: 2%;
 	text-align: center;
-	align-items: flex-start;
-	font-size: 1em;
+	align-self: center;
+	align-items: center;
+	font-size: 0.8em;
 
 }
 
 .secondfeature {
-	align-self: flex-end;
-	width: 140px;
-	height: 200px;
+	align-self: center;
+	width: 100px;
+	height: 150px;
 	margin-top: 45%;
 	text-align: center;
 	align-items: flex-end;
-	font-size: 1em;
+	font-size: 0.8em;
 
 }
 
