@@ -485,13 +485,13 @@ input[type=submit]:hover {
 
 .pricebox>h3 {
 	padding: 5%;
-	font-size: 1.8em;
+	font-size: 1.1em;
 
 }
 
 .pricebox>p {
 
-	font-size: 4em;
+	font-size: 2.5em;
 	padding: 5%;
 }
 
@@ -502,7 +502,13 @@ input[type=submit]:hover {
 	margin-bottom: 5%;
 
 	border-radius: 30px;
-	font-size: 2em;
+	font-size: 1.5em;
+}
+
+/* Footer section */ 
+
+.endsection {
+	font-size: 1em;
 }
 
 
