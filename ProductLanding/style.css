@@ -176,7 +176,6 @@ input[type=submit]:hover {
 
 #Features>.stitle {
 	display: none;
-	
 }
 
 #Features {
@@ -330,40 +329,167 @@ input[type=submit]:hover {
 /* navigation styles */
 
 @media screen and (max-width: 480px) {
-
-.navbar {
-	flex-direction: row;
-	align-items: flex-end;
-	font-size: 0.7em;
-width: 180px;
-margin-top: 15%;
+	.navbar {
+		flex-direction: row;
+		align-items: flex-end;
+		font-size: 0.7em;
+		width: 180px;
+		margin-top: 15%;
+	}
+	/* Introduction section styles */
+	.introduction {
+		margin-top: 20%;
+		justify-content: space-between;
+	}
+	.intro>h1 {
+		font-size: 2em;
+		width: 150%;
+	}
+	.intro>h4 {
+		font-size: 0.8em;
+		width: 250%;
+	}
+	/* Styles for Bladeless Fan and Cloud animation */
+	.Bladeless svg {
+		display: none;
+	}
+	/* Styling forms */
+	input[type=email] {
+		width: 75%;
+		height: 30px;
+		border-radius: 30px;
+		font-size: 0.5em;
+		text-align: center;
+		padding-left: 1%;
+	}
+	input[type=submit] {
+		width: 35%;
+		height: 25px;
+		margin-left: 20%;
+		margin-top: 5%;
+		border-radius: 10px;
+		font-size: 0.2em;
+	}
+	input[type=submit]:hover {
+		cursor: pointer;
+		height: 25px;
+		margin-right: -1%;
+		border: none;
+	}
+	/* Second section of the page */
+	#Features img {
+		display: none;
+	}
+	#Features>.stitle {
+		font-size: 1.2em;
+		display: flex;
+		align-self: center;
+	}
+	#Features {
+		flex-direction: row;
+		margin-left: 2%;
+		margin-top: -11%;
+	}
+	.firstfeature {
+		align-self: flex-start;
+		width: 100px;
+		height: 150px;
+		margin-top: 25%;
+		margin-left: 2%;
+		text-align: center;
+		align-self: center;
+		align-items: center;
+		font-size: 0.8em;
+	}
+	.secondfeature {
+		align-self: center;
+		width: 100px;
+		height: 150px;
+		margin-top: 45%;
+		text-align: center;
+		align-items: flex-end;
+		font-size: 0.8em;
+	}
+	.firstfeature h3,
+	.secondfeature h3 {
+		margin-top: 50%;
+	}
+	.vtitle {
+		margin-top: 8%;
+		font-size: 1.2em;
+	}
+	.editvideo {
+		margin-top: 8%;
+		height: 75%;
+		width: 70%;
+		display: flex;
+		justify-content: center;
+		opacity: 0.8;
+	}
+	/* Stying for the fourth section of the page which is pricing */
+	.stitle {
+		font-size: 1.2em;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.prices {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.pricebox {
+		width: 75%;
+		height: 55%;
+	}
+	.pricebox>h3 {
+		padding: 5%;
+		font-size: 1.1em;
+	}
+	.pricebox>p {
+		font-size: 2.5em;
+		padding: 5%;
+	}
+	.pricebox>button {
+		width: 45%;
+		height: 80%;
+		margin-bottom: 5%;
+		border-radius: 30px;
+		font-size: 1.5em;
+	}
+	/* Footer section */
+	.endsection {
+		font-size: 0.8em;
+	}
 }
 
-/* Introduction section styles */
-
-.introduction {
-	margin-top: 20%;
-	justify-content: space-between;
-}
-
-.intro>h1 {
-	font-size: 2em;
-	width: 150%;
-}
-
-.intro>h4 {
- font-size: 0.8em;
- width: 250%;
-}
-
+@media screen and (min-width: 481px) and (max-width: 1080px) {
+	.navbar {
+		flex-direction: row;
+		align-items: flex-start;
+		font-size: 0.7em;
+		width: 180px;
+		margin-top: 15%;
+	}
+	/* Introduction section styles */
+	.introduction {
+		margin-top: 15%;
+		justify-content: space-between;
+	}
+	.intro>h1 {
+		font-size: 2em;
+		width: 250%;
+	}
+	.intro>h4 {
+		font-size: 1em;
+		width: 200%; }
 
 /* Styles for Bladeless Fan and Cloud animation */
-
 .Bladeless svg {
-display:none;
-	
+	display: visible;
+	width: 400px;
+	height: auto;
 }
-
 /* Styling forms */
 input[type=email] {
 	width: 75%;
@@ -373,82 +499,62 @@ input[type=email] {
 	text-align: center;
 	padding-left: 1%;
 }
-
 input[type=submit] {
 	width: 35%;
 	height: 25px;
-	
 	margin-left: 20%;
 	margin-top: 5%;
-	
 	border-radius: 10px;
 	font-size: 0.2em;
 }
-
 input[type=submit]:hover {
 	cursor: pointer;
 	height: 25px;
 	margin-right: -1%;
 	border: none;
 }
-
 /* Second section of the page */
 #Features img {
 	display: none;
 }
-
 #Features>.stitle {
-	font-size: 1.2em;
+	font-size: 2.2em;
 	display: flex;
 	align-self: center;
-	
 }
-
 #Features {
 	flex-direction: row;
-	margin-left: 2%;
+	margin-left: 1%;
 	margin-top: -11%;
-	
-
 }
-
 .firstfeature {
-	align-self: flex-start;
-	width: 100px;
+	align-self: center;
+	width: 220px;
 	height: 150px;
-	margin-top: 25%;
+	margin-top: 15%;
 	margin-left: 2%;
 	text-align: center;
 	align-self: center;
 	align-items: center;
 	font-size: 0.8em;
-
 }
-
 .secondfeature {
 	align-self: center;
-	width: 100px;
+	width: 220px;
 	height: 150px;
 	margin-top: 45%;
 	text-align: center;
-	align-items: flex-end;
+	align-items: center;
 	font-size: 0.8em;
-
 }
-
 .firstfeature h3,
 .secondfeature h3 {
-	margin-top: 50%;
+	margin-top: 30%;
 }
-
 .vtitle {
-
 	margin-top: 8%;
 	font-size: 1.2em;
-
 }
-
-
 .editvideo {
 	margin-top: 8%;
 	height: 75%;
@@ -457,60 +563,37 @@ input[type=submit]:hover {
 	justify-content: center;
 	opacity: 0.8;
 }
-
-
-
 /* Stying for the fourth section of the page which is pricing */
-
 .stitle {
-	
 	font-size: 1.2em;
 	margin-top: 5%;
 	margin-bottom: 5%;
-
 }
-
 .prices {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
-
 .pricebox {
-
-	width: 75%;
+	width: 55%;
 	height: 55%;
 }
-
 .pricebox>h3 {
 	padding: 5%;
 	font-size: 1.1em;
-
 }
-
 .pricebox>p {
-
 	font-size: 2.5em;
 	padding: 5%;
 }
-
 .pricebox>button {
-
 	width: 45%;
 	height: 80%;
 	margin-bottom: 5%;
-
 	border-radius: 30px;
-	font-size: 1.5em;
-}
-
-/* Footer section */ 
-
-.endsection {
 	font-size: 1em;
 }
-
-
-
+		
+	
 }
