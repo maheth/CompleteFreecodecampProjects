@@ -498,10 +498,10 @@ input[type=submit]:hover {
 }
 /* Styling forms */
 input[type=email] {
-	width: 75%;
-	height: 30px;
+	width: 70%;
+	height: 35px;
 	border-radius: 10px;
-	font-size: 0.8em;
+	font-size: 1em;
 	text-align: center;
 	padding-left: 1%;
 	-webkit-appearance: none;
@@ -511,51 +511,53 @@ input[type=submit] {
 	-webkit-appearance: none;
 
 	width: 35%;
-	height: 25px;
-	margin-left: 20%;
+	height: 35px;
+	
 	margin-top: 5%;
 	border-radius: 10px;
-	font-size: 0.4em;
+	font-size: 1em;
 }
 input[type=submit]:hover {
 	cursor: pointer;
 	height: 25px;
-	margin-right: -1%;
-	border: none;
 }
 /* Second section of the page */
 #Features img {
 	display: none;
 }
 #Features>.stitle {
-	font-size: 2.2em;
+	font-size: 3.5em;
 	display: flex;
 	align-self: center;
+	margin-right: 5%;
 }
 #Features {
 	flex-direction: row;
 	margin-left: 1%;
-	margin-top: -11%;
+	margin-top: -21%;
+	justify-content: center;
 }
 .firstfeature {
-	align-self: center;
 	width: 220px;
-	height: 150px;
+	height: 350px;
 	margin-top: 15%;
+	padding-top: 5%;
 	margin-left: 2%;
 	text-align: center;
 	align-self: center;
 	align-items: center;
-	font-size: 0.8em;
+	font-size: 1.2em;
 }
+
 .secondfeature {
 	align-self: center;
+	padding-top: 5%;
 	width: 220px;
-	height: 150px;
+	height: 350px;
 	margin-top: 45%;
 	text-align: center;
 	align-items: center;
-	font-size: 0.8em;
+	font-size: 1.2em;
 }
 .firstfeature h3,
 .secondfeature h3 {
@@ -563,19 +565,19 @@ input[type=submit]:hover {
 }
 .vtitle {
 	margin-top: 8%;
-	font-size: 1.2em;
+	font-size: 2.2em;
 }
 .editvideo {
 	margin-top: 8%;
-	height: 75%;
-	width: 70%;
+	height: 250px;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	opacity: 0.8;
 }
 /* Stying for the fourth section of the page which is pricing */
 .stitle {
-	font-size: 1.2em;
+	font-size: 2.2em;
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
@@ -591,10 +593,10 @@ input[type=submit]:hover {
 }
 .pricebox>h3 {
 	padding: 5%;
-	font-size: 1.1em;
+	font-size: 2.1em;
 }
 .pricebox>p {
-	font-size: 2.5em;
+	font-size: 3.5em;
 	padding: 5%;
 }
 .pricebox>button {
@@ -602,7 +604,7 @@ input[type=submit]:hover {
 	height: 80%;
 	margin-bottom: 5%;
 	border-radius: 30px;
-	font-size: 1em;
+	font-size: 1.5em;
 }
 		
 	
