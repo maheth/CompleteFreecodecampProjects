@@ -473,7 +473,7 @@ input[type=submit]:hover {
 	.navbar {
 		flex-direction: row;
 		align-items: flex-start;
-		font-size: 0.7em;
+		font-size: 0.75em;
 		width: 180px;
 		margin-top: 15%;
 	}
@@ -483,17 +483,17 @@ input[type=submit]:hover {
 		justify-content: space-between;
 	}
 	.intro>h1 {
-		font-size: 2em;
+		font-size: 2.2em;
 		width: 250%;
 	}
 	.intro>h4 {
-		font-size: 1em;
+		font-size: 1.2em;
 		width: 200%; }
 
 /* Styles for Bladeless Fan and Cloud animation */
 .Bladeless svg {
 	display: visible;
-	width: 400px;
+	width: 500px;
 	height: auto;
 }
 /* Styling forms */
