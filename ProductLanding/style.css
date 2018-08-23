@@ -86,6 +86,11 @@ li {
 
 /* Styles for Bladeless Fan and Cloud animation */
 
+.Bladeless svg {
+	width: 100%;
+	height: auto;
+}
+
 #noanimate {
 	display: none;
 	width: 100%;
