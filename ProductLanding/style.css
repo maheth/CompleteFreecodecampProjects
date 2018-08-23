@@ -132,6 +132,7 @@ li {
 }
 
 input[type=email] {
+	-webkit-appearance: none;
 	width: 75%;
 	height: 50px;
 	padding-left: 5%;
@@ -153,7 +154,7 @@ input[type=submit] {
 	width: 35%;
 	height: 35px;
 	box-sizing: border-box;
-
+	-webkit-appearance: none;
 	margin-top: 2%;	
 	background-color: var(--cloud-color);
 	border-radius: 10px;
