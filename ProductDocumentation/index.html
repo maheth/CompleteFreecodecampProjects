@@ -55,45 +55,253 @@
 
     <!--Actual content of the documentation-->
     <main id="main-doc">
-        
+
         <section class="main-section" id="Overview">
             <header>
                 <h2>Overview</h2>
             </header>
+            <p>In this tutorial, you will learn how to write content for tutorials.ubuntu.com and reach a wide audience of both
+                beginner Linux users and advanced users such as developers and system administrators.</p>
+            <p>We will start by looking at general guidelines, the structure of a tutorial and go through the publication and
+                review process.</p>
+
+            <h3>What you'll learn</h3>
+            <ul>
+                <li>How to create and structure a tutorial from a single Markdown file</li>
+                <li>How to use the additional Markdown features specific to the engine</li>
+                <li>How to render it locally to see what your readers will see</li>
+                <li>How to get it ready for review by the Ubuntu Docs team</li>
+            </ul>
+            <h3>What you'll need</h3>
+            <ul>
+                <li>A computer running Ubuntu 16.04 or above</li>
+                <li>The git command-line client (that you can install by running sudo apt install git)</li>
+                <li>Docker to run the website locally</li>
+                <li>A GitHub account, for the publication and review process</li>
+            </ul>
+            <p>Depending on the topic and your level of experience, writing a tutorial can be a very easy task, but following
+                these guidelines is important to keep the whole set of published tutorials consistent. Let's get started!</p>
         </section>
+
+        <!--Next Main Section Begins-->
+
         <section class="main-section" id="General_guidelines">
             <header>
                 <h2>General Guidelines</h2>
             </header>
+            <h3>Mission of tutorials </h3>
+            <p>Tutorials are step by step guides aimed at a very diverse audience. To provide a good learning experience, a
+                consistent and didactic approach is key.
+
+            </p>
+            <p>A good tutorial should:
+
+            </p>
+            <ul>
+                <li>be focused on one topic or a very small group of related topics. Keep it simple and on point as people who
+                    want to learn multiple subjects will take multiple tutorials.
+                </li>
+                <li>produce a tangible result. The topic is demonstrated with a small practical project and not only a theoretical
+                    or "hello world" example. The tutorial reader will come out of it with a working example on their environment.
+                </li>
+                <li>be short. An estimated 60 minutes for a tutorial is an absolute maximum. Most tutorials should be in the
+                    range of 15 - 30 minutes.
+                </li>
+                <li>be divided in short steps. Each step is practical and results in user-visible progress.
+                </li>
+            </ul>
+
+            <h3>Tone</h3>
+            <p>The tone of your tutorial should be friendly. Try to make the reader feel that they're building and learning
+                something together with you.
+
+            </p>
+            <p>All tutorials should have the same tone, regardless of the topic. This is why you should complete one or two
+                of the existing tutorials before writing your first one.
+
+            </p>
+            <p>In short, this isn't a teacher/student paradigm, but rather friends sharing some time together. Thus,
+                <strong>"we"</strong> should be used as much as possible, like
+                <strong>"we have just seen", "we now understand that...".</strong> However,
+                <strong>"you"</strong> can be used for demonstrating things in the user's context, like:
+                <strong>"edit your file", "your directory should look like this", "on your system",</strong>etc.
+
+            </p>
+            <p>And now, let's see the first required step!
+
+            </p>
         </section>
+
+        <!--Next Main Section Begins-->
+
         <section class="main-section" id="Metadata_and_structure">
             <header>
                 <h2>Metadata and Structure</h2>
             </header>
+            <p>Each tutorial is built using a single Markdown file.</p>
+            <p>This file starts with a set of metadata in Front matter format to be consumed by the tutorials engine. For example,
+                at the top of the source file of this guidelines tutorial, you will find:
+
+            </p>
+            <code>
+                ---
+                <br> id: tutorial-guidelines
+                <br> summary: Learn how to create, write and publish tutorials on tutorials.ubuntu.com, reaching a wide audience
+                of both beginner and advanced Linux users. categories: community
+                <br> tags: guidelines, guide, write, contribute
+                <br> difficulty: 2 status: published image: https://foo.png
+                <br> feedback_url: https://github.com/canonical-websites/tutorials.ubuntu.com/issues
+                <br> published: 2017-01-13
+                <br> author: Canonical Web Team
+                <webteam@canonical.com>
+                    <br> ---
+            </code>
+            <p>Let's have a look at each field:</p>
+            <ul>
+                <li>id: the identifier of the tutorial to be used in the URL. Keep it short but clear.</li>
+                <li>summary: a description of the tutorial (10 to 30 words) to be displayed on the frontpage of the site</li>
+                <li>categories: any of cloud, community, containers, desktop, iot, packaging or server</li>
+                <li>tags: a comma-separated list of tags used by the site search</li>
+                <li>difficulty: the scale spans from 1 to 5. Beginners without previous knowledge of the given topic should be
+                    able to follow and understand tutorials from level 1 without any other prerequisite knowledge.</li>
+                <li>status: draft or published</li>
+                <li>image (optional): an absolute link to an image that will be used when sharing the tutorial on social networks.
+                    Preferred dimensions: width should be over 1000px with a 16:9 or 16:10 ratio.</li>
+                <li>feedback_url: where to report bugs and give feedback about this tutorial. Unless you have very specific requirements,
+                    this should be: https://github.com/canonical-websites/tutorials.ubuntu.com/issues.</li>
+                <li>author: the name and email address between brackets of the author of the tutorial. If you don't intend to
+                    maintain this tutorial after publication, please use Canonical Web Team
+                    <webteam@canonical.com></webteam>
+                </li>
+                <li>published: a date in YYYY-MM-DD format, to be updated after any major change to the tutorial
+                </li>
+            </ul>
+            <p>After this metadata section, the tutorial starts.
+
+            </p>
         </section>
+
+        <!--Next Main Section Begins-->
+
+
         <section class="main-section" id="Introducing_your_content">
             <header>
                 <h2>Introducing your content
                 </h2>
             </header>
+            <p>First impressions matter and the first page of your tutorial should be welcoming and informative. On tutorials.ubuntu.com,
+                an "Overview" page should be the first step of every tutorial.</p>
+            <p>The overview contains at least three small parts:
+
+            </p>
+            <ul>
+                <li>a summary
+                </li>
+                <li>a "What you'll learn" section
+                </li>
+                <li>a "What you'll need" section.
+                </li>
+            </ul>
+            <h3>The summary
+            </h3>
+            <p>The first paragraph or parapgraphs of the overview is a summary of the tutorial's objectives, its purpose and
+                why the reader should go through it. An image can be included, as well as external links.
+
+            </p>
+            <h4>Example</h4>
+            <code>
+                ## Overview
+                <br> Duration: 1:00
+                <br> Turning your website into a desktop integrated app is a relatively simple thing to do, but distributing
+                it as such and making it noticeable in app stores is another story.
+                <br> This tutorial will show you how to leverage Electron and snaps to create a website-based desktop app from
+                scratch and publish it on a multi-million user store shared between many Linux distributions.
+                <br> For this tutorial, the website we are going to package is an HTML5 game called [Castle Arena](http://castlearena.io).
+                <br> ![](https://assets.ubuntu.com/v1/7f7e704f-shot.png)
+            </code>
+            <h3>The "What you'll learn" section
+            </h3>
+            <p>This section includes the list of topics covered by your tutorial. It's a way to align readers expectations with
+                the content they are going to read. Topics are presented as bullet points.
+
+            </p>
+            <h4>Example</h4>
+            <code>
+                ### What you'll learn
+                <br> - How to create a website-based desktop app using Electron
+                <br> - How to turn it into a snap package
+                <br> - How to test it and share it with the world
+            </code>
+            <h3>The "What you'll need" section
+            </h3>
+            <p>This is the list of prerequisites the reader needs to meet before starting the tutorial. If there is a need for
+                specific hardware, software or user accounts, this is the right place to talk about it. If there is a need
+                for specific technical knowledge to go through your tutorial, use this section as an opportunity to link
+                to documentation and other tutorials.
+
+            </p>
+            <h4>Example</h4>
+            <code>### What you'll need
+                <br> - Ubuntu Desktop 16.04 or above
+                <br> - Some basic command-line knowledge</code>
+            <h3>Optionally: a survey widget
+            </h3>
+            <p>You can gather some insights on who your readers are by adding a survey widget. Using this widget is not a requirement,
+                but it helps gathering audience statistics and can help making tutorials better as a whole.
+
+            </p>
+            <p>To create this widget, you need to use the following syntax:
+
+            </p>
+            <code>
+                Survey
+                <br> : How will you use this tutorial?
+                <br> - Only read through it
+                <br> - Read it and complete the exercises
+                <br> : What is your current level of experience?
+                <br> - Novice
+                <br> - Intermediate
+                <br> - Proficient
+                <br>
+            </code>
+            <p>Note that Google Analytics is used as the survey backend.
+
+            </p>
+            <p>When you are done with your friendly and informative introduction, you can start adding more steps (remember,
+                second level titles are used to declare the start of a step) and build your tutorial story.</p>
+            <p>To do so, we will now go through some content recommendations.
+
+            </p>
         </section>
         <section class="main-section" id="Do's_and_Don't">
-            <header><h2>Do's and Don't</h2></header>
+            <header>
+                <h2>Do's and Don't</h2>
+            </header>
         </section>
         <section class="main-section" id="Rewarding_your_readers">
-            <header><h2>Rewarding your readers</h2></header>
+            <header>
+                <h2>Rewarding your readers</h2>
+            </header>
         </section>
         <section class="main-section" id="Syntax_tips">
-            <header><h2>Syntax Tips</h2></header>
+            <header>
+                <h2>Syntax Tips</h2>
+            </header>
         </section>
         <section class="main-section" id="Local_rendering">
-            <header><h2>Local Rendering</h2></header>
+            <header>
+                <h2>Local Rendering</h2>
+            </header>
         </section>
         <section class="main-section" id="Review_process">
-            <header><h2>Review Process</h2></header>
+            <header>
+                <h2>Review Process</h2>
+            </header>
         </section>
         <section class="main-section" id="That's_all_folks">
-            <header><h2>That's all Folks</h2></header>
+            <header>
+                <h2>That's all Folks</h2>
+            </header>
         </section>
     </main>
 

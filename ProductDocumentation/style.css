@@ -9,6 +9,6 @@
 
 #Main-Container {
     display: grid;
-    grid-template-columns: 3fr 8fr;
+    grid-template-columns: 30% 4fr;
     
 }
