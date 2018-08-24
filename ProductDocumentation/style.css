@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+/* Grid Styles */
+
+#Main-Container {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    
+}
