@@ -277,31 +277,232 @@
             <header>
                 <h2>Do's and Don't</h2>
             </header>
+            <p>In addition to the previous advice on what a tutorial should be and what is mandatory, you should pay special
+                attention to the following points:</p>
+            <h3>Each step should be concise, but not too short
+            </h3>
+            <p>Be wary of a step's length. In average, 5 to 10 minutes is more than enough for a single step to complete. Don't
+                make them too short either. Naturally, some steps will be shorter than others (such as the first and last
+                steps).
+
+            </p>
+            <h3>If too long, prefer dividing the tutorial
+            </h3>
+            <p>Tutorials are self-sufficient, but they can nonetheless build upon each other (you can link from the requirements
+                section of the first step, for example). One tutorial could require another tutorial to be completed first.
+                And if you are reusing the same code, ensure you provide a repository as a starting point.
+
+            </p>
+            <p>If a tutorial is too long, consider breaking it up into several pieces. However, ensure all tutorials present
+                a distinct objective.
+
+            </p>
+            <h3>Don't have too many steps
+            </h3>
+            <p>Steps should be concise and tutorials should be rather short. Consequently, you shouldn't have too many steps
+                in your tutorial. We don't want to make the reader desperate by glancing at the number of remaining steps
+                before tutorial completion.
+
+            </p>
+            <h3>Each step should be rewarding
+            </h3>
+            <p>As a writer, you should try to keep the reader entertained at each step and this is achieved by careful story
+                building. Each step should end on concrete progress towards the end goal. It should be, if possible, tangible
+                and interactive, so that the reader can be familiarised with notions introduced by the step.
+
+            </p>
+            <p>To earn bonus reader commitment points, finish a step on a "cliffhanger"!
+
+            </p>
+            <h3>External links in tutorials
+            </h3>
+            <p>Links to external website are forbidden during a tutorial. We don't want people's attention diverted from the
+                task they are going through (which emphasize the fact that each step should have enough knowledge to be self-sufficient).
+                In particular, do not link the reader to the reference documentation. We want to keep the user's attention
+                on the current task only. Download links are allowed though.
+
+            </p>
+            <h3>Provide regular code "checkpoints"
+            </h3>
+            <p>This is mostly for developer oriented tutorials, but if this rule can be applied to an admin/advanced users oriented
+                one, please do so!
+
+            </p>
+            <p>The advice is to provide regular checkpoints where people can sync back their source code with the tutorial,
+                in particular, at the start of a given step. Readers could have stopped then resumed going through a tutorial,
+                and may not have the source code from previous steps anymore. Consequently, in the case of a code-writing
+                tutorial, please try to provide a link to the current state of the code at the start of a step.
+
+            </p>
+            <h3>Do not repeat the setup/install phase for each tutorial
+            </h3>
+            <p>Avoid repetitive setups or installation phases, particularly if the tutorial isn't a beginner one. Beginner tutorials
+                should contain a setup phase while more advanced tutorials should reference other beginner tutorials as prerequisites.
+
+            </p>
         </section>
         <section class="main-section" id="Rewarding_your_readers">
             <header>
                 <h2>Rewarding your readers</h2>
             </header>
+            <p>On the last page of a tutorial, the project is finished and you remind readers they have reached their goal and
+                have grown some new skills.
+
+            </p>
+            <p>Take one or two paragraphs to remind them of what they went through and what they have achieved. That way, readers
+                can reflect upon the various steps and their newly acquired knowledge. Ensure you use a friendly title for
+                this final step.
+
+            </p>
+            <p>For example, as a reader of this tutorial, you should have understood what's needed to create a successful learning
+                experience, what the recommendations are, and how the Markdown syntax works. You now know how to deploy the
+                website locally and how to propose your content for review!
+
+            </p>
+            <p>On the last page, make sure you also include at least one of the following sections:
+
+            </p>
+            <ul>
+                <li>Next steps
+                </li>
+                <li>Further reading
+                </li>
+            </ul>
+            <h3>"Next steps"
+            </h3>
+            <code>
+                ### Next steps
+                <br> * If you need support, the [snapcraft forum](https://forum.snapcraft.io) is the best place to get
+                <br> all your questions answered and get in touch with the community.
+            </code>
+            <h3>"Further reading"
+            </h3>
+            <p>With another list of bullet points, provide a list of external resources to get more information on the topic.
+                You can link to documentation, related source code, or blog posts that will provide more insights.
+
+            </p>
+            <code>
+                ### Further readings
+                <br> * The snapcraft documention has everything you need if you want to look more
+                <br> into [hooks](https://docs.snapcraft.io/build-snaps/hooks)
+                <br> and [scriptlets](https://docs.snapcraft.io/build-snaps/scriptlers).
+            </code>
         </section>
         <section class="main-section" id="Syntax_tips">
             <header>
                 <h2>Syntax Tips</h2>
             </header>
+            <p>The syntax used is by and large regular Markdown syntax, but there are some specificities:
+
+            </p>
+            <h3>Line breaks and empty lines
+            </h3>
+            <ul>
+                <li>Paragraphs are delimited by empty lines
+                </li>
+                <li>Line breaks will create a new line
+                </li>
+            </ul>
+            <p>In the context of an admonition or a survey widget, using an empty line will close it and go back to text.
+
+            </p>
+            <h3>Images</h3>
+            <p>Images can be hosted locally (relatively linked to the markdown source) or remotely. The tutorial engine will
+                fetch remote images and cache them locally.
+
+            </p>
         </section>
         <section class="main-section" id="Local_rendering">
             <header>
                 <h2>Local Rendering</h2>
             </header>
+            <p>When writing a tutorial, it's extremely useful to see how it will render on the website.
+
+            </p>
+            <p>We are going to need a local instance of tutorials.ubuntu.com, which is something we can achieve without any
+                advanced technical knowledge: it takes 5 minutes and a single command handles all the process.
+
+            </p>
+            <p>To do so, start by cloning the tutorials git repository:
+
+            </p>
+            <code>git clone https://github.com/canonical-websites/tutorials.ubuntu.com.git
+            </code>
+            <p>Then enter the tutorials.ubuntu.com directory and launch the run script.
+
+            </p>
+            <code>cd tutorials.ubuntu.com
+                <br> ./run
+            </code>
+            <p>If you have Docker correctly installed, it will build a local tutorials.ubuntu.com instance. The first time (and
+                only the first time) you run this command, it will download all the required dependencies. When the site
+                is ready, a local server starts serving it at http://localhost:8016.</p>
+            <p>Each time you save a file you are working on, it triggers a page refresh on this local server, allowing for rapid
+                iterations on the content.
+
+            </p>
+            <p>Once you can have seen your tutorial in its final form, it's time to share it with the world.
+
+            </p>
         </section>
         <section class="main-section" id="Review_process">
             <header>
                 <h2>Review Process</h2>
             </header>
+            <p>The tutorials repository is managed by the Ubuntu Web and Doc teams. A review process is in place to ensure new tutorials are being looked at by writers, engineers and documentation experts.
+
+            </p>
+            <h3>Source code structure
+            </h3>
+            <p>The tutorials.ubuntu.com source code contains a tutorials directory. Each of its subdirectories matches a tutorial category: cloud, server, packaging, etc. Your tutorial should be included into one of these.
+
+            </p>
+            <p>For example:
+
+            </p>
+            <code>-tutorials/ <br>
+                └── server/ <br>    
+                    └── my-server-tutorial.md</code>
+                    <p>Once your tutorial is in the right directory, you can then propose a pull request of your changes.
+
+                    </p>
+
         </section>
         <section class="main-section" id="That's_all_folks">
             <header>
                 <h2>That's all Folks</h2>
             </header>
+            <p>Congrats, you made it! If you have been watching closely, you are now fully equipped to write a compelling tutorial and take your future readers to new heights!
+
+            </p>
+            <p>Now you know how to:
+
+            </p>
+                <ul>
+                    <li>Create a welcoming and informative intro to your content
+                    </li>
+                    <li>Provide an interesting and easy-to-follow learning experience
+                    </li>
+                    <li>Structure your markdown source file
+                    </li>
+                    <li>Render tutorials locally and submit them for publication
+                    </li>
+                </ul>
+                <p>There are a lot of topics to write about and if you are looking for ideas, just think about what you master and frequently do on Ubuntu, something that's useful to you, even if it's an arcane topic or a very simple set of tips you think people would benefit from.
+
+                </p>
+                <h3>Next steps
+                </h3>
+                <ul>
+                    <li>Write your first tutorial on your topic of choice and propose it for publication!
+                    </li>
+                    <li>Pick one of our opened "Content" issues and make your first contribution to the project
+                    </li>
+                    <li>Join the #ubuntu-doc channel on Freenode IRC to chat with the doc team and share your thoughts
+                    </li>
+                    <li>Read other tutorials and help us improving them by opening new issues on GitHub
+                    </li>
+                </ul>
         </section>
     </main>
 
