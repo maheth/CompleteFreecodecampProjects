@@ -1,14 +1,97 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-
 * {
     font-family: 'Raleway', sans-serif;
+}
 
+/* CSS Variables for Colors */
+
+:root {
+    --background-color: #D1D0D6;
+    --good-purple: #523BA6;
+    --dark-bluish-purple: #291f52;
+    --grey-light: #beb6d1;
+}
+
+body {
+    background: var(--background-color);
+}
+
+#icon {
+    position: fixed;
+    left: 95%;
+    top: 80%;
+    font-size: 2em;
+    color: var(--dark-bluish-purple);
 }
 
 /* Grid Styles */
 
 #Main-Container {
     display: grid;
-    grid-template-columns: 30% 4fr;
+    grid-template-columns: 1fr 70%;
+    grid-template-rows: 30% 75%;
+    justify-content: center;
+    margin: 5%;
+    box-shadow: 2px 2px 3px 2px #291f5283;
+}
+
+/* Navbar styles */
+
+#navbar {
+    background: var(--good-purple);
+    margin-right: 5%;
+}
+
+#navbar>header>h1 {
+    color: var(--grey-light);
+    text-align: center;
+    background: var(--dark-bluish-purple);
+    padding: 5%;
+    position: relative;
+    top: -20px;
+    font-weight: 800;
+}
+
+.nav-link {
+    color: var(--grey-light);
+    text-decoration: none;
+}
+
+#navbar ul li:hover {
+    background: var(--dark-bluish-purple);
+    padding: 5%;
+}
+
+.nav-link:hover,
+.nav-link:visited {
+    color: var(--grey-light);
+}
+
+#navbar ul li {
+    list-style-type: none;
+    margin: 5%;
+    padding: 2%;
+    font-size: 1.3em;
     
 }
+
+/* Main Content styles */
+
+#main-doc {
+    color: var(--dark-bluish-purple);
+}
+
+
+code {
+    background: var(--dark-bluish-purple);
+    color: var(--grey-light);
+    font-size: 0.8em;   
+    display: block;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    margin: 2% 2% 2% 0;
+    padding: 2%;
+    box-shadow: 1px 1px 1px 1px #291f524b;
+    border-radius: 5px;
+ }
