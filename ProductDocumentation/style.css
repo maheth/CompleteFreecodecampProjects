@@ -82,7 +82,7 @@ body {
 #main-doc {
     color: var(--dark-bluish-purple);
     background: var(--background-color);
-    padding: 5%;
+    padding: 10%;
 
 }
 
@@ -103,7 +103,7 @@ code {
 
  /* Media Queries */
  
- @media screen and (max-width: 780px){
+ @media screen and (min-width: 100px) and (max-width: 780px){
 
     #Main-Container {
         grid-template-columns: auto;
