@@ -103,7 +103,7 @@ code {
 
  /* Media Queries */
  
- @media screen and (max-width: 480px){
+ @media screen and (max-width: 780px){
 
     #Main-Container {
         grid-template-columns: auto;
@@ -134,13 +134,14 @@ code {
 
     
     #icon {
-        left: 75%;
+        left: 80%;
         top: 40%;
     mix-blend-mode: normal;
     }
 
 #main-doc{
-    padding: 2% 5%;
+    padding: 10%;
+
 
 }
     
