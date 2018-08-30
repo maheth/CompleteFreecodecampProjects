@@ -13,7 +13,7 @@ div .fcc_test_ui {
 }
 
 #fcc_toggle:checked ~ #fcc_foldout_menu  {
-    background: none;
+    
     left: 0 !important;
 }
 
