@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Sunflower:300');
 
 
+/* Temporary fix for the issue on the script position for running the tests */
+
+div .fcc_test_ui {
+
+    position: fixed;
+}
+
+
 /* Setting basic styles */
 
 

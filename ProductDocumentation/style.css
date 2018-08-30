@@ -12,6 +12,8 @@
     --grey-light: #beb6d1;
 }
 
+
+
 body {
     background: var(--good-purple);
 }
@@ -24,6 +26,12 @@ body {
     color: var(--dark-bluish-purple);
 }
 
+/* Temporary fix for the issue on the script position for running the tests */
+
+div .fcc_test_ui {
+
+    position: fixed;
+}
 /* Grid Styles */
 
 #Main-Container {
