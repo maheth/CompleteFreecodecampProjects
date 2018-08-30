@@ -6,7 +6,7 @@
 /* CSS Variables for Colors */
 
 :root {
-    --background-color: #D1D0D6;
+    --background-color: #FB502C;
     --good-purple: #523BA6;
     --dark-bluish-purple: #291f52;
     --grey-light: #beb6d1;
@@ -15,7 +15,7 @@
 
 
 body {
-    background: var(--good-purple);
+    background: var(--grey-light);
 }
 
 #icon {
