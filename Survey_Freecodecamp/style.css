@@ -12,9 +12,9 @@ div .fcc_test_ui {
 
 }
 
-div #fcc_foldout_menu {
+#fcc_toggle:checked ~ #fcc_foldout_menu  {
     background: none;
-    left: 0;
+    left: 0 !important;
 }
 
 
