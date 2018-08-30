@@ -12,7 +12,7 @@ div .fcc_test_ui {
 
 }
 
-div .fcc_foldout_menu {
+div #fcc_foldout_menu {
     background: none;
     left: 0;
 }
