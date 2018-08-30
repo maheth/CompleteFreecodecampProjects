@@ -62,7 +62,7 @@ body {
 }
 
 #navbar ul li:hover {
-    background: var(--good-purple);
+    background: var(--background-color);
     padding: 5%;
 }
 
