@@ -74,7 +74,7 @@ body {
 
 #navbar ul li {
     list-style-type: none;
-    margin: 5%;
+    margin: 3%;
     padding: 2%;
     font-size: 1.1em;
     
@@ -120,16 +120,12 @@ code {
     }
 
     #navbar {
-        max-width: 100%;
+        width: 100%;
         text-align: center;
     
         
     }
 
-    #navbar>header>h1 {
-        font-size: 1.5em;
-    
-    }
 
     #navbar ul {
         max-height: 200px;
@@ -140,12 +136,6 @@ code {
     }
 
     
-    #icon {
-        left: 80%;
-        top: 40%;
-    mix-blend-mode: normal;
-    }
-
 #main-doc{
     padding: 12% !important;
 
