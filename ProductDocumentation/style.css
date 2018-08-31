@@ -114,6 +114,10 @@ code {
         
     }
 
+    #navbar>header>h1 {
+        font-size: 1.7em;
+    }
+
     #navbar {
         max-width: 100%;
         text-align: center;
