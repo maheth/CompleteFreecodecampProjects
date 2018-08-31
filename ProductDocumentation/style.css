@@ -62,8 +62,9 @@ body {
 
 #navbar ul li:hover {
     background: var(--dark-bluish-purple);
-    padding: 5%;
+    padding: 3%;
     color: var(--Orange-light);
+    border-radius: 5px;
 }
 
 .nav-link:hover,
