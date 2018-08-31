@@ -87,7 +87,7 @@ li {
 /* Styles for Bladeless Fan and Cloud animation */
 
 .Bladeless svg {
-	width: 100%;
+	width: 750px;
 	height: auto;
 }
 
@@ -274,9 +274,10 @@ input[type=submit]:hover {
 	align-items: center;
 	width: 280px;
 	height: 400px;
-	background: rgba(219, 203, 181, 0.8);
+	background: var(--pure-white);
 	box-shadow: 4px 4px 0px rgba(219, 203, 181, 0.1);
 	margin-bottom: 10%;
+	border: 1px solid var(--red-berry);
 }
 
 .pricebox>h3 {
@@ -286,7 +287,7 @@ input[type=submit]:hover {
 	font-size: 24px;
 	text-align: center;
 	text-transform: capitalize;
-	color: var(--black-board);
+	color: var(--red-berry);
 }
 
 .pricebox>p {
@@ -297,7 +298,7 @@ input[type=submit]:hover {
 	padding: 10%;
 	text-align: center;
 	text-transform: capitalize;
-	color: var(--red-berry);
+	color: var(--cloud-color);
 }
 
 .pricebox>button {
@@ -307,7 +308,7 @@ input[type=submit]:hover {
 	margin-bottom: 10%;
 	color: var(--dusty-sand);
 	text-align: center;
-	background-color: var(--cloud-color);
+	background-color: var(--red-berry);
 	border-radius: 30px;
 	font-family: 'Exo 2';
 	border-color: transparent;
