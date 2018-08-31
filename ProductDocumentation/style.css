@@ -6,23 +6,22 @@
 /* CSS Variables for Colors */
 
 :root {
-    --background-color: #FB502C;
+    --background-color: #EDE0DA;
     --good-purple: #523BA6;
     --dark-bluish-purple: #291f52;
-    --grey-light: #beb6d1;
+    --Orange-light: #ECC5A6;
 }
 
 
 
 body {
-    background: var(--grey-light);
+    background: var(--Orange-light);
 }
 
 #icon {
-    position: fixed;
-    left: 95%;
-    top: 80%;
-    font-size: 2em;
+    text-align: right;
+    width: 100%;
+    font-size: 1.2em;
     color: var(--dark-bluish-purple);
 }
 
@@ -40,14 +39,14 @@ body {
 /* Navbar styles */
 
 #navbar {
-    background: var(--dark-bluish-purple);
+    background: var(--good-purple);
         
 }
 
 
 
 #navbar>header>h1 {
-    color: var(--grey-light);
+    color: var(--Orange-light);
     text-align: center;
     font-size: 2em;
     padding: 5%;
@@ -57,18 +56,19 @@ body {
 }
 
 .nav-link {
-    color: var(--grey-light);
+    color: var(--Orange-light);
     text-decoration: none;
 }
 
 #navbar ul li:hover {
-    background: var(--background-color);
+    background: var(--dark-bluish-purple);
     padding: 5%;
+    color: var(--Orange-light);
 }
 
 .nav-link:hover,
 .nav-link:visited {
-    color: var(--grey-light);
+    color: var(--Orange-light);
 }
 
 #navbar ul li {
@@ -90,7 +90,7 @@ body {
 
 
 code {
-    background: var(--dark-bluish-purple);
+    background: var(--Orange-light);
     color: var(--grey-light);
     font-size: 0.8em;   
     display: block;
@@ -145,9 +145,5 @@ code {
     padding: 10%;
 
 
-}
-    
-code {
-    margin: 2% 3% 2% 1%;
 }
  }
