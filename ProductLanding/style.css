@@ -344,7 +344,7 @@ input[type=submit]:hover {
 
 	.navbar {
 		flex-direction: row;
-		align-items: space-around;
+		align-items: space-between;
 		font-size: 0.7em;
 		width: 150px;
 		margin-top: 10%;	
