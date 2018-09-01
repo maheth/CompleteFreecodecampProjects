@@ -15,7 +15,7 @@
 }
 
 body {
-	font-family: 'Exo 2';
+	font-family: 'Exo 2', sans-serif;
 }
 
 img {
@@ -337,50 +337,59 @@ input[type=submit]:hover {
 /* navigation styles */
 
 @media screen and (max-width: 480px) {
+
+	img {
+		max-width: 85%;
+	}
+
 	.navbar {
 		flex-direction: row;
-		align-items: flex-end;
+		align-items: flex-start;
 		font-size: 0.7em;
-		width: 180px;
-		margin-top: 15%;
+		width: 150px;
+		margin-top: 10%;
+		margin-left: -12%;
 	}
 	/* Introduction section styles */
 	.introduction {
 		margin-top: 20%;
-		justify-content: space-between;
+		justify-content: flex-start;
 	}
 	.intro>h1 {
-		font-size: 2em;
+		font-size: 1.3em;
 		width: 150%;
 	}
 	.intro>h4 {
-		font-size: 0.8em;
-		width: 250%;
+		font-size: 0.7em;
+		width: 130%;
 	}
 	/* Styles for Bladeless Fan and Cloud animation */
 	.Bladeless svg {
-		display: none;
+		display: block;
+		width: 135px;
+		height: 200px;
+		margin-right: 20px;
 	}
 	/* Styling forms */
 	input[type=email] {
 		-webkit-appearance: none;
 
-		width: 75%;
+		width: 150px;
 		height: 30px;
 		border-radius: 10px;
-		font-size: 0.5em;
+		font-size: 0.65em;
 		text-align: center;
 		padding-left: 1%;
 	}
 	input[type=submit] {
 		-webkit-appearance: none;
 
-		width: 35%;
+		width: 150px;
 		height: 30px;
 		
 		margin-top: 5%;
 		border-radius: 10px;
-		font-size: 0.2em;
+		font-size: 0.65em;
 	}
 	input[type=submit]:hover {
 		cursor: pointer;
