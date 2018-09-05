@@ -178,7 +178,7 @@ margin-top: 3%;
 }
 
 #Features {
-	height: 80vh;
+	height: 60vh;
 	justify-content: center;
 	display: flex;
 	align-items: center;
@@ -196,7 +196,7 @@ i {
 
 #featureitems {
 	font-size: 1.5em;
-	height: 80vh;
+	height: 60vh;
 	justify-content: center;
 	display: flex;
 	align-items: center;
@@ -224,7 +224,7 @@ i {
 	display: flex;
 	align-items: center;
 	margin-top: 8%;
-	height: 75%;
+	
 	width: 70%;
 	display: flex;
 	justify-content: center;
