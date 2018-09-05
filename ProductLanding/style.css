@@ -131,6 +131,11 @@ li {
 }
 
 /* styling forms */
+form {
+	display: flex;
+	flex-direction: column;
+}
+
 input[type=email] {
 	-webkit-appearance: none;
 	width: 250px;
@@ -151,11 +156,11 @@ input[type=submit]:focus {
 }
 
 input[type=submit] {
-	width: 150px;
+	width: 250px;
 	height: 50px;
 	box-sizing: border-box;
 	-webkit-appearance: none;
-	margin-top: 2%;
+margin-top: 3%;
 	background-color: var(--cloud-color);
 	border-radius: 10px;
 	border: transparent;
@@ -206,7 +211,7 @@ i {
 .vtitle {
 	margin-top: 8%;
 	font-size: 1.5em;
-	height: 80vh;
+	height: 60vh;
 	color: var(--dusty-sand);
 	justify-content: center;
 	display: flex;
@@ -214,7 +219,7 @@ i {
 }
 
 .editvideo {
-	height: 80vh;
+	height: 60vh;
 	justify-content: center;
 	display: flex;
 	align-items: center;
