@@ -1,5 +1,4 @@
 /* Global CSS Variables */
-
 :root {
 	--cloud-color: #6196F8;
 	--black-board: #565656;
@@ -16,6 +15,7 @@
 
 body {
 	font-family: 'Exo 2', sans-serif;
+	background: var(--red-berry);
 }
 
 img {
@@ -23,19 +23,20 @@ img {
 	height: auto;
 }
 
-/* navigation styles */
-
-li {
-	list-style: none;
+/* CSS Grid styles */
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	justify-content: center;
 }
 
-.nav-link {
-	color: var(--cloud-color);
-	text-decoration: none;
-}
-
-#header {
+/* CSS Flexbox styles */
+header {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	font-family: 'Exo 2';
 	position: fixed;
 	width: 100%;
@@ -46,64 +47,32 @@ li {
 
 .navbar {
 	display: flex;
+	align-content: center;
 	justify-content: space-around;
+	margin-top: 5%;
 	width: 30vw;
-	margin-top: 6%;
 }
 
-/* Introduction section styles */
-
-.introduction {
-	display: flex;
-	font-family: 'Exo 2';
-	color: var(--black-board);
-	margin-top: 10%;
+/* Header styles */
+li {
+	list-style: none;
 }
 
-.intro {
-	display: flex;
-	flex-direction: column;
-	align-self: flex-start;
-	height: 100%;
-	width: 65%;
-	justify-content: center;
-	margin-left: 2%;
-}
-
-.intro>h1 {
-	font-size: 3em;
-	padding-bottom: 2%;
-}
-
-.intro h1 span {
+.nav-link {
+	text-decoration: none;
 	color: var(--cloud-color);
 }
 
-.intro>h4 {
-	font-size: 1.5em;
-	font-weight: 400;
+.nav-link:hover {
+	text-decoration: underline;
+	color: var(--red-berry);
 }
 
-/* Styles for Bladeless Fan and Cloud animation */
-
-.Bladeless svg {
-	width: 750px;
-	height: auto;
-}
-
-#noanimate {
-	display: none;
-	width: 100%;
-	height: auto;
-}
-
-.Bladeless {
-	left: 50%;
-	top: 10%;
-}
-
-.airanimate {
-	width: 40%;
+/* Introduction section and animation */
+.introduction,
+.cloudimage {
+	background: var(--red-berry);
+	padding-top: 18%;
 }
 
 .airanimate {
@@ -117,28 +86,54 @@ li {
 	0% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 1;
 		transform: translate(40px, 0px);
 	}
+
 	80% {
 		opacity: 1;
 		transform: translate(-20px, 0px);
 	}
+
 	100% {
 		opacity: 0;
 	}
 }
 
-/* Styling forms */
-
-#form {
-	margin-top: 10%;
+.introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
+.cloudimage svg {
+	height: 350px;
+	width: 450px;
+}
+
+.introduction>h1 {
+	font-size: 3em;
+	padding-bottom: 2%;
+}
+
+.introduction h1 span {
+	color: var(--cloud-color);
+}
+
+.introduction>h4 {
+	font-size: 1.5em;
+	font-weight: 400;
+	text-align: center;
+	color: var(--dusty-sand);
+	margin-bottom: 2%;
+}
+
+/* styling forms */
 input[type=email] {
 	-webkit-appearance: none;
-	width: 350px;
+	width: 250px;
 	height: 50px;
 	background-color: var(--dusty-sand);
 	border-radius: 10px;
@@ -156,11 +151,11 @@ input[type=submit]:focus {
 }
 
 input[type=submit] {
-	width: 350px;
+	width: 150px;
 	height: 50px;
 	box-sizing: border-box;
 	-webkit-appearance: none;
-	margin-top: 2%;	
+	margin-top: 2%;
 	background-color: var(--cloud-color);
 	border-radius: 10px;
 	border: transparent;
@@ -169,97 +164,79 @@ input[type=submit] {
 	font-size: 0.8em;
 	font-weight: 700;
 	cursor: pointer;
-	transition: height 2s margin-right 3s;
 }
 
-input[type=submit]:hover {
-	cursor: pointer;
-	height: 45px;
-	margin-right: -1%;
-	border: none;
-}
-
-/* styling second section */
-
-#Features>.stitle {
-	display: none;
+/* Styling second section of the page */
+#Features,
+#featureitems {
+	background: var(--dusty-sand);
 }
 
 #Features {
+	height: 80vh;
+	justify-content: center;
 	display: flex;
 	align-items: center;
-	height: 80%;
-	margin-top: -10%;
 }
 
-.firstfeature {
-	align-self: center;
-	width: 283px;
-	height: 483px;
-	margin-top: 10%;
-	text-align: center;
-	align-items: center;
-	font-size: 2.5em;
-	color: var(--black-board);
-	background: var(--cloud-color);
-	box-shadow: 0px 6px 10px rgba(86, 86, 86, 0.5);
-}
-
-.secondfeature {
-	align-self: center;
-	width: 283px;
-	height: 483px;
-	margin-top: 25%;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	font-size: 2.5em;
-	color: var(--black-board);
-	background: var(--dusty-sand);
-	box-shadow: 0px 6px 10px rgba(86, 86, 86, 0.5);
-}
-
-.firstfeature h3,
-.secondfeature h3 {
-	margin-top: 50%;
-}
-
-/* Styling the third section for the video */
-
-.vtitle {
-	display: flex;
-	justify-content: center;
-	margin-top: 5%;
+.stitle {
 	font-size: 2em;
-	color: var(--black-board);
+	color: var(--red-berry);
 }
 
-.vtitle span {
-	color: var(--cloud-color);
+i {
+	color: var(--red-berry);
+	margin-right: 2%;
 }
 
-.videos {
-	display: flex;
+#featureitems {
+	font-size: 1.5em;
+	height: 80vh;
 	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+#featureitems h3 {
+	margin: 10%;
+	font-weight: 500;
+}
+
+/* styling third section */
+.vtitle {
+	margin-top: 8%;
+	font-size: 1.5em;
+	height: 80vh;
+	color: var(--dusty-sand);
+	justify-content: center;
+	display: flex;
+	align-items: center;
 }
 
 .editvideo {
-	margin-top: 5%;
-	height: 450px;
-	width: 100%;
+	height: 80vh;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	margin-top: 8%;
+	height: 75%;
+	width: 70%;
 	display: flex;
 	justify-content: center;
 	opacity: 0.8;
 }
 
-/* Stying for the fourth section of the page which is pricing */
+/* Styling the fourth section */
+#pricing {
+	background: var(--dusty-sand);
+}
 
-.stitle {
+.stitle h2 {
 	text-align: center;
-	font-size: 2em;
-	margin-top: 5%;
+	font-size: 1.5em;
+	margin-top: 7%;
 	margin-bottom: 5%;
-	color: var(--cloud-color);
+	color: var(--red-berry);
 }
 
 .prices {
@@ -284,7 +261,7 @@ input[type=submit]:hover {
 	font-family: 'Exo 2';
 	font-weight: 500;
 	padding: 10%;
-	font-size: 24px;
+	font-size: 0.8em;
 	text-align: center;
 	text-transform: capitalize;
 	color: var(--red-berry);
@@ -294,7 +271,7 @@ input[type=submit]:hover {
 	font-family: 'Exo 2';
 	font-weight: 500;
 	line-height: normal;
-	font-size: 96px;
+	font-size: 3em;
 	padding: 10%;
 	text-align: center;
 	text-transform: capitalize;
@@ -314,316 +291,346 @@ input[type=submit]:hover {
 	border-color: transparent;
 	font-weight: 500;
 	line-height: normal;
-	font-size: 2.2em;
+	font-size: 1.4em;
 	text-align: center;
 	cursor: pointer;
 }
-
-/* Footer Design */
 
 .endsection {
-	background: var(--cloud-color);
-	height: 80px;
-	text-align: center;
+	background: var(--black-board);
 	padding: 2%;
-	font-family: 'Exo 2';
-	font-weight: 500;
-	font-size: 2em;
+	text-align: center;
 	color: var(--dusty-sand);
-}
-
-/* Media Queries for Responsive */
-
-/* navigation styles */
-
-@media screen and (max-width: 480px) {
-
-	img {
-		max-width: 85%;
-	}
-
-	.navbar {
-		flex-direction: row;
-		
-		justify-content: space-around;
-		font-size: 0.7em;
-		width: 150px;
-		margin-top: 10%;	
-		margin-left: -12%;
-	}
-	/* Introduction section styles */
-	.introduction {
-		margin-top: 20%;
-		justify-content: flex-start;
-	}
-	.intro>h1 {
-		font-size: 1.3em;
-		width: 150%;
-	}
-	.intro>h4 {
-		font-size: 0.7em;
-		width: 130%;
-	}
-	/* Styles for Bladeless Fan and Cloud animation */
-	.Bladeless svg {
-		display: block;
-		width: 135px;
-		height: 200px;
-		margin-right: 20px;
-	}
-	/* Styling forms */
-	input[type=email] {
-		-webkit-appearance: none;
-
-		width: 150px;
-		height: 30px;
-		border-radius: 10px;
-		font-size: 0.65em;
-		text-align: center;
-		padding-left: 1%;
-	}
-	input[type=submit] {
-		-webkit-appearance: none;
-
-		width: 150px;
-		height: 30px;
-		
-		margin-top: 5%;
-		border-radius: 10px;
-		font-size: 0.65em;
-	}
-	input[type=submit]:hover {
-		cursor: pointer;
-		height: 35px;
-		margin-right: -1%;
-		border: none;
-	}
-	/* Second section of the page */
-	#Features img {
-
-		display: none;
-	}
-	#Features>.stitle {
-		font-size: 1.2em;
-		display: flex;
-		align-self: center;
-	}
-	#Features {
-		flex-direction: row;
-		margin-left: 2%;
-		margin-top: -11%;
-	}
-	.firstfeature {
-		align-self: flex-start;
-		width: 100px;
-		height: 150px;
-		margin-top: 25%;
-		margin-left: 2%;
-		text-align: center;
-		align-self: center;
-		align-items: center;
-		font-size: 0.8em;
-	}
-	.secondfeature {
-		align-self: center;
-		width: 100px;
-		height: 150px;
-		margin-top: 45%;
-		text-align: center;
-		align-items: flex-end;
-		font-size: 0.8em;
-	}
-	.firstfeature h3,
-	.secondfeature h3 {
-		margin-top: 50%;
-	}
-	.vtitle {
-		margin-top: 8%;
-		font-size: 1.2em;
-	}
-	.editvideo {
-		margin-top: 8%;
-		height: 75%;
-		width: 70%;
-		display: flex;
-		justify-content: center;
-		opacity: 0.8;
-	}
-	/* Stying for the fourth section of the page which is pricing */
-	.stitle {
-		font-size: 1.2em;
-		margin-top: 5%;
-		margin-bottom: 5%;
-	}
-	.prices {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.pricebox {
-		width: 75%;
-		height: 55%;
-	}
-	.pricebox>h3 {
-		padding: 5%;
-		font-size: 1.1em;
-	}
-	.pricebox>p {
-		font-size: 2.5em;
-		padding: 5%;
-	}
-	.pricebox>button {
-		width: 45%;
-		height: 80%;
-		margin-bottom: 5%;
-		border-radius: 30px;
-		font-size: 1.5em;
-	}
-	/* Footer section */
-	.endsection {
-		font-size: 0.8em;
-	}
-}
-
-@media screen and (min-width: 481px) and (max-width: 960px) {
-	.navbar {
-		flex-direction: row;
-		align-items: flex-start;
-		font-size: 0.75em;
-		width: 180px;
-		margin-top: 15%;
-	}
-	/* Introduction section styles */
-	.introduction {
-		margin-top: 15%;
-		justify-content: space-between;
-	}
-	.intro>h1 {
-		font-size: 2.2em;
-		width: 250%;
-	}
-	.intro>h4 {
-		font-size: 1em;
-		width: 200%; }
-
-/* Styles for Bladeless Fan and Cloud animation */
-.Bladeless svg {
-	display: block;
-	width: 300px;
-	height: auto;
-}
-/* Styling forms */
-input[type=email] {
-	width: 150px;
-	height: 30px;
-	border-radius: 10px;
-	font-size: 0.8em;
-	text-align: center;
-	padding-left: 1%;
-	-webkit-appearance: none;
-
-}
-input[type=submit] {
-	-webkit-appearance: none;
-
-	width: 150px;
-	height: 30px;
-	
-	margin-top: 5%;
-	border-radius: 10px;
 	font-size: 1em;
-}
-input[type=submit]:hover {
-	cursor: pointer;
-	height: 35px;
-}
-/* Second section of the page */
-#Features img {
-	display: none;
-}
-#Features>.stitle {
-	font-size: 3em;
-	display: flex;
-	align-self: center;
-	margin-right: 1%;
-}
-#Features {
-	flex-direction: row;
-	margin-left: 1%;
-	margin-top: -21%;
-	justify-content: center;
-}
-.firstfeature {
-	width: 200px;
-	height: 350px;
-	margin-top: 15%;
-	padding-top: 5%;
-	margin-left: 1%;
-	text-align: center;
-	align-self: center;
-	align-items: center;
-	font-size: 1.2em;
+	height: 10vh;
 }
 
-.secondfeature {
-	align-self: center;
-	padding-top: 5%;
-	
-	width: 200px;
-	height: 350px;
-	margin-top: 45%;
-	text-align: center;
-	align-items: center;
-	font-size: 1.2em;
-}
-.firstfeature h3,
-.secondfeature h3 {
-	margin-top: 30%;
-}
-.vtitle {
-	margin-top: 8%;
-	font-size: 2.2em;
-}
-.editvideo {
-	margin-top: 8%;
-	height: 250px;
-	width: 90%;
-	display: flex;
-	justify-content: center;
-	opacity: 0.8;
-}
-/* Stying for the fourth section of the page which is pricing */
-.stitle {
-	font-size: 2.2em;
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
-.prices {
+/*Mobile styles */
+
+@media all and (max-width: 1280px) { 
+/* styling forms */
+form {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
 }
+
+
+input[type=email] {
+	-webkit-appearance: none;
+	width: 250px;
+	height: 35px;
+	margin-top: 5%;
+}
+
+
+input[type=submit] {
+	width: 250px;
+	height: 35px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	margin-top: 5%;
+	
+}
+
+/* Styling second section of the page */
+#Features, #featureitems {
+	height: 70vh;
+}
+
+/* styling third section */
+.vtitle,
+.editvideo {
+	height: 40vh;
+}
+
+/* Styling the fourth section */
+.prices {
+	justify-content: space-around;
+}
+
 .pricebox {
-	width: 55%;
-	height: 55%;
+	height: 420px;
+	width: 320px;
+	align-self: center;
 }
-.pricebox>h3 {
-	padding: 5%;
-	font-size: 2.1em;
+
 }
-.pricebox>p {
-	font-size: 3.5em;
-	padding: 5%;
+
+
+
+
+@media all and (max-width: 1024px) { 
+
+	.introduction>h1 {
+		font-size: 2em;
+		padding-bottom: 2%;
+		padding-top: 5%;
+	}
+
+	.introduction>h4 {
+		font-size: 1.1em;
+	}
+
+/* styling forms */
+form {
+	display: flex;
+	flex-direction: column;
 }
-.pricebox>button {
-	width: 45%;
-	height: 80%;
-	margin-bottom: 5%;
-	border-radius: 30px;
+
+
+input[type=email] {
+	-webkit-appearance: none;
+	width: 250px;
+	height: 35px;
+	margin-top: 5%;
+}
+
+
+input[type=submit] {
+	width: 250px;
+	height: 35px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	margin-top: 5%;
+	
+}
+
+/* Styling second section of the page */
+#Features, #featureitems {
+	height: 40vh;
+}
+
+.stitle {
 	font-size: 1.5em;
 }
-		
+
+#featureitems {
+	font-size: 1.2em; }
+
+	/* styling third section */
+	.vtitle,
+	.editvideo {
+		height: 30vh;
+	}
+
+	/* Styling the fourth section */
+	.prices {
+		justify-content: space-around;
+	}
+
+	.pricebox {
+		height: 320px;
+		width: 245px;
+		align-self: center;
+	}
+
+ }
+
+
+@media all and (max-width: 736px) {
+	.container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.navbar {
+		width: 300px;
+		margin-top: 6%;
+		margin-left: 1%;
+		margin-bottom: 2%;
+		justify-content: space-around;
+	}
+
+	/* Introduction section */
+	.cloudimage svg {
+		height: 250px;
+		width: 350px;
+		display: block;
+		margin: auto;
 	
+	}
+
+
+	.introduction>h1 {
+		font-size: 2.5em;
+		padding-bottom: 2%;
+		padding-top: 2%;
+	}
+
+	.introduction>h4 {
+		font-size: 1.2em;
+	}
+
+	/* styling forms */
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input[type=email] {
+		-webkit-appearance: none;
+		width: 250px;
+		height: 35px;
+		margin-top: 5%;
+	}
+
+
+	input[type=submit] {
+		width: 250px;
+		height: 35px;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+		margin-top: 5%;
+		
+	}
+
+	/* Styling second section of the page */
+	#Features {
+		height: 100px;
+	}
+
+	.stitle {
+		font-size: 1.5em;
+	}
+
+	#featureitems {
+		font-size: 1em;
+		height: 50vh;
+	}
+
+	#featureitems h3 {
+		margin: 5%;
+		font-weight: 300;
+		padding-left: 2%;
+	}
+
+	/* styling third section */
+	.vtitle,
+	.editvideo {
+		height: 35vh;
+	}
+
+	.editvideo {
+		margin: 0 auto;
+		padding: 0 auto;
+		
+	}
+
+	/* Styling the fourth section */
+	.prices {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.pricebox {
+		height: 320px;
+		width: 320px;
+		align-self: center;
+	}
+
+
+}
+
+@media all and (max-width: 480px) {
+	.container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	header {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	.navbar {
+		width: 75%;
+		margin-top: -1%;
+		margin-left: 5%;
+		margin-bottom: 2%;
+	}
+
+	/* Introduction section */
+	.cloudimage svg {
+		height: 220px;
+		width: 245px;
+		display: block;
+		margin: auto;
+	}
+
+	.introduction>h1 {
+		font-size: 2em;
+		padding-bottom: 2%;
+		padding-top: 20%;
+	}
+
+	.introduction>h4 {
+		font-size: 1em;
+	}
+
+	/* styling forms */
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input[type=email] {
+		-webkit-appearance: none;
+		width: 200px;
+		height: 35px;
+		margin-top: 5%;
+	}
+
+	input[type=email],
+	input[type=submit]:focus {
+		border: none;
+	}
+
+	input[type=submit] {
+		width: 200px;
+		height: 35px;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+		margin-top: 5%;
+	}
+
+	/* Styling second section of the page */
+	#Features {
+		height: 100px;
+	}
+
+	.stitle {
+		font-size: 1.5em;
+	}
+
+	#featureitems {
+		font-size: 1em;
+		height: 30vh;
+	}
+
+	#featureitems h3 {
+		margin: 5%;
+		font-weight: 300;
+		padding-left: 2%;
+	}
+
+	/* styling third section */
+	.vtitle,
+	.editvideo {
+		height: 25vh;
+	}
+
+	.editvideo {
+		margin: 0 auto;
+		padding: 0 auto;
+	}
+
+	/* Styling the fourth section */
+	.prices {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.pricebox {
+		height: 300px;
+		width: 240px;
+		align-self: center;
+	}
 }
