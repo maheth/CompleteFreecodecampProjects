@@ -178,7 +178,7 @@ margin-top: 3%;
 }
 
 #Features {
-	height: 60vh;
+	height: 500px;
 	justify-content: center;
 	display: flex;
 	align-items: center;
@@ -196,7 +196,7 @@ i {
 
 #featureitems {
 	font-size: 1.5em;
-	height: 60vh;
+	height: 500px;
 	justify-content: center;
 	display: flex;
 	align-items: center;
@@ -211,7 +211,7 @@ i {
 .vtitle {
 	margin-top: 8%;
 	font-size: 1.5em;
-	height: 60vh;
+	height: 400px;
 	color: var(--dusty-sand);
 	justify-content: center;
 	display: flex;
@@ -219,7 +219,7 @@ i {
 }
 
 .editvideo {
-	height: 60vh;
+	height: 400px;
 	justify-content: center;
 	display: flex;
 	align-items: center;
