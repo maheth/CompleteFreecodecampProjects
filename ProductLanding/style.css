@@ -322,6 +322,201 @@ iframe {
 
 /* Mobile and tablets styles */
 
+@media all and (max-width: 1690px) {
+
+	/* Header and navigation */
+	.container {
+		height: 90;
+		width: 100%;
+	}
+
+	#header {
+		width: 100%;
+		background: var(--cloud-blue);
+		
+	}
+
+	#header img {
+		width: 80%;
+		height: auto;
+	}
+
+	.menunav {
+		display: flex;
+		flex-direction: column;
+		color: var(--tangy-orange);
+		align-items: center;
+		cursor: pointer;
+		font-size: 1.5em;
+		justify-content: center;
+		margin: auto;
+		text-align: center;
+		width: 80px;
+	}
+
+	label>a:visited {
+		color: var(--tangy-orange);
+	}
+
+	label>a {
+		cursor: pointer;
+	}
+
+	#nav-bar {
+		display: flex;
+	}
+
+	.navbar {
+		width: 100%;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.6em;
+	}
+
+	/* introduction */
+	.introduction h1 {
+		font-size: 3em;
+		margin-top: 10%;
+	}
+
+	.introduction h4 {
+		font-size: 1.8em;
+	}
+
+	/* forms */
+	input[type=email] {
+		width: 100%;
+		height: 50px;
+		font-size: 1em;
+		align-self: center;
+		margin-top: 5%;
+	}
+
+	input[type=submit] {
+		width: 100%;
+		height: 50px;
+		margin-top: 5%;
+		font-size: 1em;
+		align-self: center;
+	}
+
+	/* styling the Second section of the page */
+	#Features {
+		justify-content: center;
+		align-items: center;
+		height: 62vh;
+		width: 100%;
+		margin-top: 30%;
+	
+	}
+
+	.Bladeless svg {
+		width: 100%;
+		height: 450px;
+		align-self: center;
+	}
+
+	#featureitems h2 {
+		font-size: 2.5em;
+		color: var(--cloud-blue);
+		margin: 5%;
+		text-align: center;
+		
+	}
+
+	#featureitems h3 {
+		font-size: 1.5em;
+		text-align: center;
+		color: var(--black-board);
+		padding-top: 2%;
+		margin: 5%;
+		font-weight: 300;
+		align-self: center;
+	}
+
+	/*  styling the third section of the page */
+	#how-it-works {
+		height: 45vh;
+		
+	}
+
+	.vtitle h2 {
+		margin-top: 2%;
+		margin-bottom: 3%;
+		font-size: 2em;
+		color: var(--pure-white);
+	}
+
+	iframe {
+		
+		width: 100%;
+		
+		height: 100%;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	/*  styling the fourth section of the page */
+	#pricing {
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.prices {
+		flex-direction: row;
+		margin-top: 5%;
+	}
+
+	#pricing>h2 {
+		font-size: 2em;
+		margin-top: 10%;
+		margin-bottom: 2%;
+		text-align: center;
+	}
+
+	.pricebox {
+		width: 300px;
+		height: 90%;
+		text-align: center;
+		margin: 5%;
+		
+	}
+
+	.pricebox h3 {
+		font-size: 1.2em;
+		margin: 8%;
+	}
+
+	.pricebox p {
+		font-size: 2.5em;
+		margin: 10%;
+	}
+
+	.pricebox button {
+		width: 50%;
+		height: 4vh;
+		border-radius: 10px;
+		margin: 5%;
+	}
+
+	/* footer section */
+	.endsection {
+		height: 180%;
+		display: flex;
+		width: 100%;
+	}
+
+	.endsection p {
+		margin-top: 8%;
+		font-size: 1.5em;
+	}
+
+}
+
+
+
+
 @media all and (max-width: 1280px) {
 
 	/* Header and navigation */
