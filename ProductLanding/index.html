@@ -19,12 +19,17 @@
 </head>
 
 <body>
+    <section class="container">
   
       <header id="header">
     <section>
-      <img src="https://github.com/maheth/CompleteFreecodecampProjects/blob/master/ProductLanding/logo.png?raw=true" alt="logo" id="header-img" />
+      <img src="logo.png" alt="logo" id="header-img" />
     </section>
+    
     <nav id="nav-bar">
+      <div class="menunav">
+        
+        <label for="menu"><a onclick="navigate()"><i class="fas fa-bars"></a></i></label>
       <ul class="navbar">
         <li>
           <a href="#Features" class="nav-link">Features</a>
@@ -37,18 +42,19 @@
         </li>
 
       </ul>
+    </div>
     </nav>
 
   </header>
 
 
   <!--First section of the page -->
-  <section class="container">
+ 
   <section class="introduction">
 
     
       <h1>Bladeless
-        <span>Pure Cool</span>
+        Pure Cool
       </h1>
       <h4>Automatically purifies a whole
         <br />room, capturing all of
@@ -65,53 +71,47 @@
       </form>
     </section>
 
+ <!--Second section of the page -->
+ <section id="Features">
+      
+      <section id="featureitems">
+         <h2>Features</h2>
+          <h3>10% Less Power Consumed</h3>
+          
+         
+          <h3></i>60%
+            Quieter</h3> 
+            
+        
+      <h3>Easy to Carry</h3></section>
+      
+
     <section class="cloudimage">
     <div class="Bladeless">
       <svg version="1.1" viewBox="0, 0, 800, 800"> 
 
         <g id="BladelessFan">
           <g>
-            <path d="M355.125,564.5 C231.896,564.5 132,464.604 132,341.375 C132,218.146 231.896,118.25 355.125,118.25 C478.353,118.25 578.25,218.146 578.25,341.375 C578.25,464.604 478.353,564.5 355.125,564.5 z"
-              fill="#6196F8" />
-            <path d="M588.875,458.25 C465.646,458.25 365.75,358.353 365.75,235.125 C365.75,111.896 465.646,12 588.875,12 C712.104,12 812,111.896 812,235.125 C812,358.353 712.104,458.25 588.875,458.25 z"
-              fill="#6196F8" />
-            <path d="M557,692 C433.771,692 333.875,592.104 333.875,468.875 C333.875,345.647 433.771,245.75 557,245.75 C680.229,245.75 780.125,345.647 780.125,468.875 C780.125,592.104 680.229,692 557,692 z"
-              fill="#6196F8" />
+           
             <path d="M482.5,558.75 L576.5,558.75 L576.5,488.25 L576.5,441.25 L576.5,394.25 L529.5,406 L482.5,394.25 z" fill="#000000"
             />
             <path d="M529.5,406 C464.607,406 412,353.393 412,288.5 C412,223.606 464.607,171 529.5,171 C594.393,171 647,223.606 647,288.5 C647,353.393 594.393,406 529.5,406 z"
-              fill="#D12054" />
+              fill="#2F80ED" />
             <path d="M529.5,382.5 C477.585,382.5 435.5,340.415 435.5,288.5 C435.5,236.585 477.585,194.5 529.5,194.5 C581.415,194.5 623.5,236.585 623.5,288.5 C623.5,340.415 581.415,382.5 529.5,382.5 z"
               fill="#FFFFFF" />
 
-            <path class="airanimate" d="M482,341 L532,341 L532,351 L482,351 z" fill="#D12054" />
-            <path class="airanimate" d="M482,241 L532,241 L532,251 L482,251 z" fill="#D12054" id="Shape" />
-            <path class="airanimate" d="M522,291 L572,291 L572,301 L522,301 z" fill="#D12054" />
+            <path class="airanimate" d="M482,341 L532,341 L532,351 L482,351 z" fill="#2F80ED" />
+            <path class="airanimate" d="M482,241 L532,241 L532,251 L482,251 z" fill="#2F80ED" id="Shape" />
+            <path class="airanimate" d="M522,291 L572,291 L572,301 L522,301 z" fill="#2F80ED" />
           </g>
         </g>
       </svg>
     </div>
   </section>
-
-
-  <!--Second section of the page -->
-  <section id="Features">
-<div class="stitle"><h2>Features</h2></div>
 </section>
-  <section id="featureitems">
-    <section class="firstfeature">
 
-      <h3><i class="fas fa-plug"></i>10% Less Power Consumed</h3>
-      <h3><i class="fas fa-weight-hanging"></i>Easy to Carry</h3>
-    </section>
-    <section class="secondfeature">
 
-      <h3><i class="fas fa-volume-down"></i>60%
-        Quieter</h3> 
-        <h3><i class="far fa-calendar-alt"></i>Remote App</h3>
-    
-  </section>
-  </section>
+ 
 
   <!--Third Section of the page-->
   
@@ -119,12 +119,12 @@
     <h2>How 
       <span>It Works</span>
     </h2>
-  </section>
+  
   <section class="videos">
-    <iframe class="editvideo" id="video" src="https://player.vimeo.com/video/37631469?title=0&byline=0&portrait=0" frameborder="0"
-      webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe id="video" src="https://www.youtube.com/embed/bUJ-X1rsKV4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </section>
-</section>
+  </section>
+
   
 
   <!--Fourth section of the page-->
@@ -156,12 +156,13 @@
 
   </section>
 </section>
-
-</section>
   <!--Footer Design-->
   <footer class="endsection">
-    <p>Copyright 2018, BladeLess</p>
-  </footer>
+      <p>Copyright 2018, BladeLess</p>
+    </footer>
+</section>
+
+  
 
 
 
@@ -169,5 +170,6 @@
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
 </script>
+<script src="nav.js"></script>
 
 </html>

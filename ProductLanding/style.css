@@ -1,10 +1,9 @@
 /* Global CSS Variables */
 :root {
-	--cloud-color: #6196F8;
-	--black-board: #565656;
-	--dusty-sand: #DBCBB5;
-	--pure-white: #FFFFFF;
-	--red-berry: #D11F53;
+	--tangy-orange: #F2C94C;
+	--black-board: #333333;
+	--cloud-blue: #2F80ED;
+	--pure-white: #F2F2F2;
 }
 
 * {
@@ -15,64 +14,118 @@
 
 body {
 	font-family: 'Exo 2', sans-serif;
-	background: var(--red-berry);
-}
-
-img {
-	max-width: 100%;
-	height: auto;
+	height: 100%;
+	background: var(--pure-white);
 }
 
 /* CSS Grid styles */
 .container {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: auto;
 	justify-content: center;
 }
 
-/* CSS Flexbox styles */
-header {
+/*Header Section */
+.container {
+	background: url('/ProductLanding/topbackground.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 105%;
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 81.8%;
+}
+
+#header {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: space-between;
-	font-family: 'Exo 2';
+	padding: 2%;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	overflow: hidden;
-	background-color: var(--pure-white);
+	background: var(--cloud-blue);
+}
+
+.menunav {
+	display: flex;
+	flex-direction: column;
+	color: var(--tangy-orange);
+	align-items: center;
+	cursor: pointer;
+	font-size: 2em;
+	justify-content: center;
+	margin: auto;
+	text-align: center;
+	width: 80px;
+}
+
+label>a:visited {
+	color: var(--tangy-orange);
+}
+
+label>a {
+	cursor: pointer;
+	
+}
+
+#nav-bar {
+	display: flex;
 }
 
 .navbar {
-	display: flex;
-	align-content: center;
-	justify-content: space-around;
-	margin-top: 5%;
-	width: 30vw;
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.6em;
+	list-style-type: none;
 }
 
-/* Header styles */
-li {
-	list-style: none;
-}
 
-.nav-link {
+.navbar .nav-link {
 	text-decoration: none;
-	color: var(--cloud-color);
+	color: var(--tangy-orange);
+	font-family: "Exo 2";
+	font-size: 1.3em;
+	font-weight: bold;
 }
 
 .nav-link:hover {
 	text-decoration: underline;
-	color: var(--red-berry);
 }
 
 /* Introduction section and animation */
-.introduction,
-.cloudimage {
-	background: var(--red-berry);
-	padding-top: 18%;
+.introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 8%;
+}
+
+.introduction h1 {
+	font-size: 3em;
+	color: var(--pure-white);
+	margin-top: 2%;
+}
+
+.introduction h4 {
+	font-size: 1.5em;
+	color: var(--pure-white);
+	text-align: center;
+	margin-top: 1%;
+}
+
+/* Animation */
+.Bladeless svg {
+	width: 600px;
+	height: auto;
 }
 
 .airanimate {
@@ -102,45 +155,18 @@ li {
 	}
 }
 
-.introduction {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.cloudimage svg {
-	height: 350px;
-	width: 450px;
-}
-
-.introduction>h1 {
-	font-size: 3em;
-	padding-bottom: 2%;
-}
-
-.introduction h1 span {
-	color: var(--cloud-color);
-}
-
-.introduction>h4 {
-	font-size: 1.5em;
-	font-weight: 400;
-	text-align: center;
-	color: var(--dusty-sand);
-	margin-bottom: 2%;
-}
-
-/* styling forms */
+/* forms */
 form {
 	display: flex;
 	flex-direction: column;
+	margin-top: 2%;
 }
 
 input[type=email] {
 	-webkit-appearance: none;
-	width: 250px;
+	width: 300px;
 	height: 50px;
-	background-color: var(--dusty-sand);
+	background-color: var(--pure-white);
 	border-radius: 10px;
 	border: transparent;
 	color: var(--black-board);
@@ -148,6 +174,7 @@ input[type=email] {
 	font-family: 'Exo 2';
 	font-size: 1em;
 	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 input[type=email],
@@ -156,486 +183,860 @@ input[type=submit]:focus {
 }
 
 input[type=submit] {
-	width: 250px;
+	width: 300px;
 	height: 50px;
 	box-sizing: border-box;
 	-webkit-appearance: none;
-margin-top: 3%;
-	background-color: var(--cloud-color);
+	margin-top: 2%;
+	color: var(--pure-white);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color: var(--tangy-orange);
 	border-radius: 10px;
 	border: transparent;
-	color: var(--dusty-sand);
 	font-family: 'Exo 2';
-	font-size: 0.8em;
+	font-size: 1em;
 	font-weight: 700;
 	cursor: pointer;
 }
 
-/* Styling second section of the page */
-#Features,
-#featureitems {
-	background: var(--dusty-sand);
-}
-
+/* styling the Second section of the page */
 #Features {
-	height: 500px;
-	justify-content: center;
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
+	height: 125vh;
 }
 
-.stitle {
-	font-size: 2em;
-	color: var(--red-berry);
-}
-
-i {
-	color: var(--red-berry);
-	margin-right: 2%;
-}
-
-#featureitems {
-	font-size: 1.5em;
-	height: 500px;
-	justify-content: center;
-	display: flex;
-	align-items: center;
+#featureitems h2 {
+	font-size: 3em;
+	color: var(--cloud-blue);
 }
 
 #featureitems h3 {
-	margin: 10%;
-	font-weight: 500;
+	font-size: 2.3em;
+	color: var(--black-board);
+	padding-top: 2%;
+	font-weight: 300;
 }
 
-/* styling third section */
-.vtitle {
-	margin-top: 8%;
-	font-size: 1.5em;
-	height: 400px;
-	color: var(--dusty-sand);
-	justify-content: center;
+/*  styling the third section of the page */
+#how-it-works {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+	height: 80vh;
+	background: var(--cloud-blue);
 }
 
-.editvideo {
-	height: 400px;
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	margin-top: 8%;
-	
-	width: 70%;
-	display: flex;
-	justify-content: center;
-	opacity: 0.8;
-}
-
-/* Styling the fourth section */
-#pricing {
-	background: var(--dusty-sand);
-}
-
-.stitle h2 {
-	text-align: center;
-	font-size: 1.5em;
-	margin-top: 7%;
+.vtitle h2 {
+	margin-top: 2%;
 	margin-bottom: 5%;
-	color: var(--red-berry);
+	font-size: 3em;
+	color: var(--pure-white);
 }
 
-.prices {
-	display: flex;
-	justify-content: space-around;
+iframe {
+	width: 500px;
+	height: 250px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.pricebox {
+/*  styling the fourth section of the page */
+#pricing {
 	display: flex;
 	flex-direction: column;
+	height: 80vh;
 	justify-content: center;
 	align-items: center;
-	width: 280px;
-	height: 400px;
-	background: var(--pure-white);
-	box-shadow: 4px 4px 0px rgba(219, 203, 181, 0.1);
-	margin-bottom: 10%;
-	border: 1px solid var(--red-berry);
 }
 
-.pricebox>h3 {
-	font-family: 'Exo 2';
-	font-weight: 500;
-	padding: 10%;
-	font-size: 0.8em;
-	text-align: center;
-	text-transform: capitalize;
-	color: var(--red-berry);
-}
-
-.pricebox>p {
-	font-family: 'Exo 2';
-	font-weight: 500;
-	line-height: normal;
-	font-size: 3em;
-	padding: 10%;
-	text-align: center;
-	text-transform: capitalize;
-	color: var(--cloud-color);
-}
-
-.pricebox>button {
-	position: relative;
-	width: 85%;
-	height: 64px;
-	margin-bottom: 10%;
-	color: var(--dusty-sand);
-	text-align: center;
-	background-color: var(--red-berry);
-	border-radius: 30px;
-	font-family: 'Exo 2';
-	border-color: transparent;
-	font-weight: 500;
-	line-height: normal;
-	font-size: 1.4em;
-	text-align: center;
-	cursor: pointer;
-}
-
-.endsection {
-	background: var(--black-board);
-	padding: 2%;
-	text-align: center;
-	color: var(--dusty-sand);
-	font-size: 1em;
-	height: 10vh;
-}
-
-/*Mobile styles */
-
-@media all and (max-width: 1280px) { 
-/* styling forms */
-form {
-	display: flex;
-	flex-direction: column;
-}
-
-
-input[type=email] {
-	-webkit-appearance: none;
-	width: 250px;
-	height: 35px;
-	margin-top: 5%;
-}
-
-
-input[type=submit] {
-	width: 250px;
-	height: 35px;
-	box-sizing: border-box;
-	-webkit-appearance: none;
-	margin-top: 5%;
-	
-}
-
-/* Styling second section of the page */
-#Features, #featureitems {
-	height: 70vh;
-}
-
-/* styling third section */
-.vtitle,
-.editvideo {
-	height: 40vh;
-}
-
-/* Styling the fourth section */
 .prices {
+	display: flex;
 	justify-content: space-around;
+	align-items: center;
+	margin-top: 5%;
+}
+
+#pricing>h2 {
+	font-size: 3em;
+	color: var(--cloud-blue);
+	margin-bottom: 5%;
 }
 
 .pricebox {
-	height: 420px;
-	width: 320px;
-	align-self: center;
-}
-
-}
-
-
-
-
-@media all and (max-width: 1024px) { 
-
-	.introduction>h1 {
-		font-size: 2em;
-		padding-bottom: 2%;
-		padding-top: 5%;
-	}
-
-	.introduction>h4 {
-		font-size: 1.1em;
-	}
-
-/* styling forms */
-form {
-	display: flex;
-	flex-direction: column;
-}
-
-
-input[type=email] {
-	-webkit-appearance: none;
-	width: 250px;
-	height: 35px;
-	margin-top: 5%;
-}
-
-
-input[type=submit] {
-	width: 250px;
-	height: 35px;
-	box-sizing: border-box;
-	-webkit-appearance: none;
-	margin-top: 5%;
-	
-}
-
-/* Styling second section of the page */
-#Features, #featureitems {
+	width: 300px;
 	height: 40vh;
+	text-align: center;
+	background: var(--cloud-blue);
+	margin-right: 5%;
+	color: var(--pure-white);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-bottom: 5%;
+	border-radius: 10px;
 }
 
-.stitle {
+.pricebox h3 {
 	font-size: 1.5em;
+	margin: 5%;
 }
 
-#featureitems {
-	font-size: 1.2em; }
+.pricebox p {
+	font-size: 3.5em;
+	margin: 10%;
+}
 
-	/* styling third section */
-	.vtitle,
-	.editvideo {
-		height: 30vh;
-	}
+.pricebox button {
+	background: var(--tangy-orange);
+	color: var(--pure-white);
+	width: 10vw;
+	height: 5vh;
+	border-radius: 10px;
+	margin: 5%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+}
 
-	/* Styling the fourth section */
-	.prices {
-		justify-content: space-around;
-	}
+/* footer section */
+.endsection {
+	height: 510px;
+	background: url("/ProductLanding/footbackground.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	margin-top: 10%;
+	justify-content: center;
+	width: 100%;
+}
 
-	.pricebox {
-		height: 360px;
-		width: 330px;
-		align-self: center;
-	}
+.endsection p {
+	align-self: center;
+	margin-top: 10%;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: var(--tangy-orange);
+}
 
- }
+/* Mobile and tablets styles */
 
+@media all and (max-width: 1280px) {
 
-@media all and (max-width: 736px) {
+	/* Header and navigation */
 	.container {
-		grid-template-columns: repeat(1, 1fr);
+		height: 90;
+		width: 100%;
+	}
+
+	#header {
+		width: 100%;
+		background: var(--cloud-blue);
+		
+	}
+
+	#header img {
+		width: 80%;
+		height: auto;
+	}
+
+	.menunav {
+		display: flex;
+		flex-direction: column;
+		color: var(--tangy-orange);
+		align-items: center;
+		cursor: pointer;
+		font-size: 1.5em;
+		justify-content: center;
+		margin: auto;
+		text-align: center;
+		width: 80px;
+	}
+
+	label>a:visited {
+		color: var(--tangy-orange);
+	}
+
+	label>a {
+		cursor: pointer;
+	}
+
+	#nav-bar {
+		display: flex;
 	}
 
 	.navbar {
-		width: 300px;
-		margin-top: 6%;
-		margin-left: 1%;
-		margin-bottom: 2%;
-		justify-content: space-around;
+		width: 100%;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.6em;
 	}
 
-	/* Introduction section */
-	.cloudimage svg {
-		height: 250px;
-		width: 350px;
-		display: block;
-		margin: auto;
+	/* introduction */
+	.introduction h1 {
+		font-size: 3em;
+		margin-top: 10%;
+	}
+
+	.introduction h4 {
+		font-size: 1.8em;
+	}
+
+	/* forms */
+	input[type=email] {
+		width: 100%;
+		height: 50px;
+		font-size: 1em;
+		align-self: center;
+		margin-top: 5%;
+	}
+
+	input[type=submit] {
+		width: 100%;
+		height: 50px;
+		margin-top: 5%;
+		font-size: 1em;
+		align-self: center;
+	}
+
+	/* styling the Second section of the page */
+	#Features {
+		justify-content: center;
+		align-items: center;
+		height: 62vh;
+		width: 100%;
+		margin-top: 30%;
 	
 	}
 
+	.Bladeless svg {
+		width: 100%;
+		height: 450px;
+		align-self: center;
+	}
 
-	.introduction>h1 {
+	#featureitems h2 {
 		font-size: 2.5em;
-		padding-bottom: 2%;
-		padding-top: 2%;
-	}
-
-	.introduction>h4 {
-		font-size: 1.2em;
-	}
-
-	/* styling forms */
-	form {
-		display: flex;
-		flex-direction: column;
-	}
-
-	input[type=email] {
-		-webkit-appearance: none;
-		width: 250px;
-		height: 35px;
-		margin-top: 5%;
-	}
-
-
-	input[type=submit] {
-		width: 250px;
-		height: 35px;
-		box-sizing: border-box;
-		-webkit-appearance: none;
-		margin-top: 5%;
+		color: var(--cloud-blue);
+		margin: 5%;
+		text-align: center;
 		
-	}
-
-	/* Styling second section of the page */
-	#Features {
-		height: 100px;
-	}
-
-	.stitle {
-		font-size: 1.5em;
-	}
-
-	#featureitems {
-		font-size: 1em;
-		height: 50vh;
 	}
 
 	#featureitems h3 {
+		font-size: 1.5em;
+		text-align: center;
+		color: var(--black-board);
+		padding-top: 2%;
 		margin: 5%;
 		font-weight: 300;
-		padding-left: 2%;
+		align-self: center;
 	}
 
-	/* styling third section */
-	.vtitle,
-	.editvideo {
-		height: 35vh;
-	}
-
-	.editvideo {
-		margin: 0 auto;
-		padding: 0 auto;
+	/*  styling the third section of the page */
+	#how-it-works {
+		height: 45vh;
 		
 	}
 
-	/* Styling the fourth section */
-	.prices {
-		justify-content: center;
+	.vtitle h2 {
+		margin-top: 2%;
+		margin-bottom: 3%;
+		font-size: 2em;
+		color: var(--pure-white);
+	}
+
+	iframe {
+		
+		width: 100%;
+		
+		height: 100%;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	/*  styling the fourth section of the page */
+	#pricing {
 		flex-direction: column;
+		height: 100%;
+	}
+
+	.prices {
+		flex-direction: row;
+		margin-top: 5%;
+	}
+
+	#pricing>h2 {
+		font-size: 2em;
+		margin-top: 10%;
+		margin-bottom: 2%;
+		text-align: center;
 	}
 
 	.pricebox {
-		height: 380px;
-		width: 360px;
+		width: 300px;
+		height: 80%;
+		text-align: center;
+		margin: 5%;
+		
+	}
+
+	.pricebox h3 {
+		font-size: 1.2em;
+		margin: 8%;
+	}
+
+	.pricebox p {
+		font-size: 2.5em;
+		margin: 10%;
+	}
+
+	.pricebox button {
+		width: 50%;
+		height: 4vh;
+		border-radius: 10px;
+		margin: 5%;
+	}
+
+	/* footer section */
+	.endsection {
+		height: 180%;
+		display: flex;
+		width: 100%;
+	}
+
+	.endsection p {
+		margin-top: 8%;
+		font-size: 1.5em;
+	}
+
+}
+
+@media all and (max-width: 980px) {
+
+	/* Header and navigation */
+	.container {
+		height: 75%;
+		width: 100%;
+	}
+
+	#header {
+		width: 100%;
+		background: var(--cloud-blue);
+		
+	}
+
+	#header img {
+		width: 80%;
+		height: auto;
+	}
+
+	.menunav {
+		display: flex;
+		flex-direction: column;
+		color: var(--tangy-orange);
+		align-items: center;
+		cursor: pointer;
+		font-size: 1.5em;
+		justify-content: center;
+		margin: auto;
+		text-align: center;
+		width: 80px;
+	}
+
+	label>a:visited {
+		color: var(--tangy-orange);
+	}
+
+	label>a {
+		cursor: pointer;
+	}
+
+	#nav-bar {
+		display: flex;
+	}
+
+	.navbar {
+		width: 100%;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.6em;
+	}
+
+	/* introduction */
+	.introduction h1 {
+		font-size: 3em;
+		margin-top: 14%;
+	}
+
+	.introduction h4 {
+		font-size: 1.8em;
+	}
+
+	/* forms */
+	input[type=email] {
+		width: 100%;
+		height: 50px;
+		font-size: 1em;
+		align-self: center;
+		margin-top: 5%;
+	}
+
+	input[type=submit] {
+		width: 100%;
+		height: 50px;
+		margin-top: 5%;
+		font-size: 1em;
 		align-self: center;
 	}
+
+	/* styling the Second section of the page */
+	#Features {
+		justify-content: center;
+		align-items: center;
+		height: 62vh;
+		width: 100%;
+		margin-top: 30%;
+	
+	}
+
+	.Bladeless svg {
+		width: 100%;
+		height: 450px;
+		align-self: center;
+	}
+
+	#featureitems h2 {
+		font-size: 2em;
+		color: var(--cloud-blue);
+		margin: 5%;
+		text-align: center;
+		
+	}
+
+	#featureitems h3 {
+		font-size: 1.5em;
+		text-align: center;
+		color: var(--black-board);
+		padding-top: 2%;
+		margin: 5%;
+		font-weight: 300;
+		align-self: center;
+	}
+
+	/*  styling the third section of the page */
+	#how-it-works {
+		height: 40vh;
+		
+	}
+
+	.vtitle h2 {
+		margin-top: 2%;
+		margin-bottom: 3%;
+		font-size: 2em;
+		color: var(--pure-white);
+	}
+
+	iframe {
+		
+		width: 100%;
+		
+		height: 200px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	/*  styling the fourth section of the page */
+	#pricing {
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.prices {
+		flex-direction: row;
+		margin-top: 5%;
+	}
+
+	#pricing>h2 {
+		font-size: 2em;
+		margin-top: 10%;
+		margin-bottom: 2%;
+	}
+
+	.pricebox {
+		width: 60%;
+		height: 100%;
+		text-align: center;
+		margin: 2%;
+	}
+
+	.pricebox h3 {
+		font-size: 1.2em;
+		margin: 5%;
+	}
+
+	.pricebox p {
+		font-size: 2em;
+		margin: 10%;
+	}
+
+	.pricebox button {
+		width: 50%;
+		height: 3vh;
+		border-radius: 10px;
+	}
+
+	/* footer section */
+	.endsection {
+		height: 180%;
+		display: flex;
+		width: 100%;
+	}
+
+	.endsection p {
+		margin-top: 8%;
+		font-size: 1.5em;
+	}
+
+}
+
+@media all and (max-width: 736px) {
+	.container {
+		height: 120%;
+		width: 100%;
+	}
+
+	#header {
+		background: var(--cloud-blue);
+		width: 100%;
+	}
+
+	.menunav {
+		display: flex;
+		flex-direction: column;
+		color: var(--tangy-orange);
+		align-items: center;
+		cursor: pointer;
+		font-size: 1.5em;
+		justify-content: center;
+		margin: auto;
+		text-align: center;
+		width: 80px;
+	
+	}
+
+	label>a:visited {
+		color: var(--tangy-orange);
+	}
+
+	label>a {
+		cursor: pointer;
+	}
+
+	.navbar {
+		width: 100%;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.5em;
+	}
+
+	/* introduction */
+	.introduction h1 {
+		font-size: 2.2em;
+		margin-top: 4%;
+	}
+
+	.introduction h4 {
+		font-size: 1.2em;
+	}
+
+	/* forms */
+	input[type=email] {
+		width: 75%;
+		height: 40px;
+		align-self: center;
+	
+	}
+
+	input[type=submit] {
+		width: 75%;
+		height: 40px;
+		align-self: center;
+		margin-top: 5%;
+		
+	}
+
+/* styling the Second section of the page */
+#Features {
+	justify-content: center;
+	height: 150vh;
+	width: 100%;
+}
+
+.Bladeless svg {
+	width: 100%;
+	height: 300px;
+	
+}
+
+#featureitems h2 {
+	font-size: 2.2em;
+	color: var(--cloud-blue);
+	margin: 5%;
+}
+
+#featureitems h3 {
+	font-size: 1.2em;
+	color: var(--black-board);
+	padding-top: 2%;
+	margin: 5%;
+	font-weight: 300;
+}
+
+/*  styling the third section of the page */
+#how-it-works {
+	height: 100vh;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/*  styling the fourth section of the page */
+#pricing {
+	flex-direction: column;
+	height: 100%;
+}
+
+.prices {
+	flex-direction: column;
+	margin-top: 5%;
+}
+
+#pricing>h2 {
+	font-size: 2.5em;
+	margin-top: 10%;
+	margin-bottom: 2%;
+}
+
+.pricebox {
+	width: 90%;
+	height: 100%;
+	text-align: center;
+	margin-right: 1%;
+}
+
+.pricebox h3 {
+	font-size: 1.2em;
+	margin: 5%;
+}
+
+.pricebox p {
+	font-size: 2.3em;
+	margin: 10%;
+}
+
+.pricebox button {
+	width: 60%;
+	height: 10vh;
+	border-radius: 10px;
+}
+
+/* footer section */
+.endsection {
+	height: 180%;
+	display: flex;
+	width: 100%;
+}
+
+.endsection p {
+	margin-top: 8%;
+	font-size: 1.3em;
+}
 
 
 }
 
 @media all and (max-width: 480px) {
+
+	/* Header and navigation */
 	.container {
-		grid-template-columns: repeat(1, 1fr);
+		height: 65%;
+		width: 100%;
 	}
 
-	header {
+	#header {
+		width: 100%;
+		background: var(--cloud-blue);
+	}
+
+	#header img {
+		width: 50%;
+		height: auto;
+	}
+
+	.menunav {
+		display: flex;
 		flex-direction: column;
-		flex-wrap: nowrap;
+		color: var(--tangy-orange);
+		align-items: center;
+		cursor: pointer;
+		font-size: 1.1em;
+		justify-content: center;
+		margin: auto;
+		text-align: center;
+		width: 80px;
+	}
+
+	label>a:visited {
+		color: var(--tangy-orange);
+	}
+
+	label>a {
+		cursor: pointer;
+	}
+
+	#nav-bar {
+		display: flex;
 	}
 
 	.navbar {
-		width: 75%;
-		margin-top: -1%;
-		margin-left: 5%;
-		margin-bottom: 2%;
+		width: 100%;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.7em;
 	}
 
-	/* Introduction section */
-	.cloudimage svg {
-		height: 220px;
-		width: 245px;
-		display: block;
-		margin: auto;
+	/* introduction */
+	.introduction h1 {
+		font-size: 1.9em;
+		margin-top: 4%;
 	}
 
-	.introduction>h1 {
-		font-size: 2em;
-		padding-bottom: 2%;
-		padding-top: 20%;
-	}
-
-	.introduction>h4 {
+	.introduction h4 {
 		font-size: 1em;
 	}
 
-	/* styling forms */
-	form {
-		display: flex;
-		flex-direction: column;
-	}
-
+	/* forms */
 	input[type=email] {
-		-webkit-appearance: none;
-		width: 200px;
-		height: 35px;
+		width: 80%;
+		height: 30px;
+		font-size: 1em;
+		align-self: center;
 		margin-top: 5%;
-	}
-
-	input[type=email],
-	input[type=submit]:focus {
-		border: none;
 	}
 
 	input[type=submit] {
-		width: 200px;
-		height: 35px;
-		box-sizing: border-box;
-		-webkit-appearance: none;
+		width: 80%;
+		height: 30px;
 		margin-top: 5%;
-	}
-
-	/* Styling second section of the page */
-	#Features {
-		height: 100px;
-	}
-
-	.stitle {
-		font-size: 1.5em;
-	}
-
-	#featureitems {
 		font-size: 1em;
-		height: 30vh;
+		align-self: center;
+	}
+
+	/* styling the Second section of the page */
+	#Features {
+		justify-content: center;
+		height: 80vh;
+		width: 100%;
+	}
+
+	.Bladeless svg {
+		width: 100%;
+		height: 150px;
+	}
+
+	#featureitems h2 {
+		font-size: 1.8em;
+		color: var(--cloud-blue);
+		margin: 5%;
 	}
 
 	#featureitems h3 {
+		font-size: 1.2em;
+		color: var(--black-board);
+		padding-top: 2%;
 		margin: 5%;
 		font-weight: 300;
-		padding-left: 2%;
 	}
 
-	/* styling third section */
-	.vtitle,
-	.editvideo {
-		height: 25vh;
+	/*  styling the third section of the page */
+	#how-it-works {
+		height: 60vh;
 	}
 
-	.editvideo {
-		margin: 0 auto;
-		padding: 0 auto;
+	.vtitle h2 {
+		margin-top: 2%;
+		margin-bottom: 3%;
+		font-size: 2em;
+		color: var(--pure-white);
 	}
 
-	/* Styling the fourth section */
-	.prices {
-		justify-content: center;
+	iframe {
+		width: 100%;
+		height: 200px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	/*  styling the fourth section of the page */
+	#pricing {
 		flex-direction: column;
+		height: 100%;
+	}
+
+	.prices {
+		flex-direction: column;
+		margin-top: 5%;
+	}
+
+	#pricing>h2 {
+		font-size: 2em;
+		margin-top: 10%;
+		margin-bottom: 2%;
 	}
 
 	.pricebox {
-		height: 300px;
-		width: 240px;
-		align-self: center;
+		width: 70%;
+		height: 100%;
+		text-align: center;
+		margin-right: 1%;
+	}
+
+	.pricebox h3 {
+		font-size: 1.2em;
+		margin: 5%;
+	}
+
+	.pricebox p {
+		font-size: 2em;
+		margin: 10%;
+	}
+
+	.pricebox button {
+		width: 50%;
+		height: 5vh;
+		border-radius: 10px;
+	}
+
+	/* footer section */
+	.endsection {
+		height: 180%;
+		display: flex;
+		width: 100%;
+	}
+
+	.endsection p {
+		margin-top: 8%;
+		font-size: 1em;
 	}
 }
