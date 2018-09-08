@@ -28,7 +28,7 @@ body {
 
 /*Header Section */
 .container {
-	background: url('/ProductLanding/topbackground.svg');
+	background: url('https://github.com/maheth/CompleteFreecodecampProjects/blob/master/ProductLanding/topbackground.svg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -302,7 +302,7 @@ iframe {
 /* footer section */
 .endsection {
 	height: 510px;
-	background: url("/ProductLanding/footbackground.png");
+	background: url("https://github.com/maheth/CompleteFreecodecampProjects/blob/master/ProductLanding/footbackground.png?raw=true");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
