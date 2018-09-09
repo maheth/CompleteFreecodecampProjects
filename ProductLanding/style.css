@@ -1,9 +1,9 @@
 /* Global CSS Variables */
 :root {
 	--tangy-orange: #F2C94C;
-	--black-board: #333333;
-	--cloud-blue: #2F80ED;
-	--pure-white: #F2F2F2;
+	--black-board: #333333e0;
+	--cloud-blue: rgba(59, 10, 118, 0.829);
+	--pure-white: rgba(242, 242, 242, 0.808);
 }
 
 * {
@@ -28,16 +28,9 @@ body {
 
 /*Header Section */
 .container {
-	background: url('https://github.com/maheth/CompleteFreecodecampProjects/blob/master/ProductLanding/topbackground.png?raw=true"');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 105%;
-	position: absolute;
-	left: 0%;
-	right: 0%;
-	top: 0%;
-	bottom: 81.8%;
+	background: var(--cloud-blue);
+	height: auto;
+
 }
 
 #header {
@@ -63,6 +56,7 @@ body {
 	text-align: center;
 	width: 80px;
 }
+
 
 label>a:visited {
 	color: var(--tangy-orange);
@@ -100,19 +94,21 @@ label>a {
 	text-decoration: underline;
 }
 
+
 /* Introduction section and animation */
 .introduction {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	margin-top: 8%;
+	justify-content: flex-start;
+height: auto;
+	
 }
 
 .introduction h1 {
 	font-size: 3em;
 	color: var(--pure-white);
-	margin-top: 2%;
+
 }
 
 .introduction h4 {
@@ -124,7 +120,7 @@ label>a {
 
 /* Animation */
 .Bladeless svg {
-	width: 600px;
+	width: 500px;
 	height: auto;
 }
 
@@ -188,7 +184,7 @@ input[type=submit] {
 	box-sizing: border-box;
 	-webkit-appearance: none;
 	margin-top: 2%;
-	color: var(--pure-white);
+	color: var(--black-board);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color: var(--tangy-orange);
 	border-radius: 10px;
@@ -204,7 +200,7 @@ input[type=submit] {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 125vh;
+	height: 50%;
 }
 
 #featureitems h2 {
@@ -225,7 +221,7 @@ input[type=submit] {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 80vh;
+	height: 90vh;
 	background: var(--cloud-blue);
 }
 
@@ -246,7 +242,7 @@ iframe {
 #pricing {
 	display: flex;
 	flex-direction: column;
-	height: 80vh;
+	height: 90vh;
 	justify-content: center;
 	align-items: center;
 }
@@ -255,13 +251,13 @@ iframe {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 5%;
+	margin-top: 2%;
 }
 
 #pricing>h2 {
 	font-size: 3em;
 	color: var(--cloud-blue);
-	margin-bottom: 5%;
+	margin-bottom: 2%;
 }
 
 .pricebox {
@@ -288,11 +284,11 @@ iframe {
 
 .pricebox button {
 	background: var(--tangy-orange);
-	color: var(--pure-white);
+	color: var(--black-board);
 	width: 10vw;
 	height: 5vh;
 	border-radius: 10px;
-	margin: 5%;
+	margin: 2%;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	cursor: pointer;
 	border: none;
@@ -301,20 +297,19 @@ iframe {
 
 /* footer section */
 .endsection {
-	height: 510px;
-	background: url("https://github.com/maheth/CompleteFreecodecampProjects/blob/master/ProductLanding/footbackground.png?raw=true");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: var(--cloud-blue);
+	height: 10vh;
 	display: flex;
-	margin-top: 10%;
+	flex-direction: column;
+	
 	justify-content: center;
+	align-items: center;
 	width: 100%;
 }
 
 .endsection p {
 	align-self: center;
-	margin-top: 10%;
+	margin: 5%;
 	font-size: 2.5em;
 	font-weight: bold;
 	color: var(--tangy-orange);
@@ -326,7 +321,7 @@ iframe {
 
 	/* Header and navigation */
 	.container {
-		height: 80vh;
+		height: 600px;
 		width: 100%;
 	}
 
@@ -408,7 +403,7 @@ iframe {
 		align-items: center;
 		height: 62vh;
 		width: 100%;
-		margin-top: 30%;
+		margin-top: 5%;
 	
 	}
 
@@ -438,7 +433,7 @@ iframe {
 
 	/*  styling the third section of the page */
 	#how-it-works {
-		height: 45vh;
+		height: 55vh;
 		
 	}
 
@@ -465,21 +460,23 @@ iframe {
 
 	.prices {
 		flex-direction: row;
-		margin-top: 5%;
+		margin-top: 2%;
 	}
 
 	#pricing>h2 {
 		font-size: 2em;
-		margin-top: 10%;
-		margin-bottom: 2%;
+		margin-top: 5%;
+		
 		text-align: center;
 	}
 
 	.pricebox {
 		width: 300px;
-		height: 90%;
+		height: 80%;
 		text-align: center;
 		margin: 5%;
+	
+
 		
 	}
 
@@ -489,9 +486,9 @@ iframe {
 	}
 
 	.pricebox p {
+	
 		font-size: 2.5em;
-		margin: 10%;
-	}
+		margin: 10%; }
 
 	.pricebox button {
 		width: 50%;
@@ -502,14 +499,15 @@ iframe {
 
 	/* footer section */
 	.endsection {
-		height: 180%;
+		height: 10vh;
 		display: flex;
 		width: 100%;
 	}
 
 	.endsection p {
-		margin-top: 8%;
+		margin: 2%;
 		font-size: 1.5em;
+		
 	}
 
 }
@@ -521,7 +519,7 @@ iframe {
 
 	/* Header and navigation */
 	.container {
-		height: 80vh;
+		height: 500px;
 		width: 100%;
 	}
 
@@ -601,9 +599,9 @@ iframe {
 	#Features {
 		justify-content: center;
 		align-items: center;
-		height: 62vh;
+		height: 500px;
 		width: 100%;
-		margin-top: 30%;
+		margin-top: 10%;
 	
 	}
 
@@ -633,7 +631,7 @@ iframe {
 
 	/*  styling the third section of the page */
 	#how-it-works {
-		height: 45vh;
+		height: 40vh;
 		
 	}
 
@@ -655,7 +653,7 @@ iframe {
 	/*  styling the fourth section of the page */
 	#pricing {
 		flex-direction: column;
-		height: 100%;
+		height: 500px;
 	}
 
 	.prices {
@@ -665,14 +663,14 @@ iframe {
 
 	#pricing>h2 {
 		font-size: 2em;
-		margin-top: 10%;
+		margin-top: 2%;
 		margin-bottom: 2%;
 		text-align: center;
 	}
 
 	.pricebox {
 		width: 300px;
-		height: 80%;
+		height: 75%;
 		text-align: center;
 		margin: 5%;
 		
@@ -690,20 +688,20 @@ iframe {
 
 	.pricebox button {
 		width: 50%;
-		height: 4vh;
+		height: 3vh;
 		border-radius: 10px;
 		margin: 5%;
 	}
 
 	/* footer section */
 	.endsection {
-		height: 180%;
+		height: 10vh;
 		display: flex;
 		width: 100%;
 	}
 
 	.endsection p {
-		margin-top: 8%;
+		margin: 2%;
 		font-size: 1.5em;
 	}
 
@@ -713,7 +711,7 @@ iframe {
 
 	/* Header and navigation */
 	.container {
-		height: 75%;
+		height: 50vh;
 		width: 100%;
 	}
 
@@ -793,7 +791,7 @@ iframe {
 	#Features {
 		justify-content: center;
 		align-items: center;
-		height: 62vh;
+		height: 32vh;
 		width: 100%;
 		margin-top: 30%;
 	
@@ -825,7 +823,7 @@ iframe {
 
 	/*  styling the third section of the page */
 	#how-it-works {
-		height: 40vh;
+		height: 30vh;
 		
 	}
 
@@ -848,6 +846,7 @@ iframe {
 	#pricing {
 		flex-direction: column;
 		height: 100%;
+		height: 50vh;
 	}
 
 	.prices {
@@ -857,7 +856,7 @@ iframe {
 
 	#pricing>h2 {
 		font-size: 2em;
-		margin-top: 10%;
+		margin-top: 2%;
 		margin-bottom: 2%;
 	}
 
@@ -886,21 +885,22 @@ iframe {
 
 	/* footer section */
 	.endsection {
-		height: 180%;
+		height: 10vh;
 		display: flex;
 		width: 100%;
 	}
 
 	.endsection p {
-		margin-top: 8%;
+		align-self: center;
 		font-size: 1.5em;
+		margin-bottom: 5%;
 	}
 
 }
 
 @media all and (max-width: 736px) {
 	.container {
-		height: 120%;
+		height: 110vh;
 		width: 100%;
 	}
 
@@ -943,7 +943,7 @@ iframe {
 	/* introduction */
 	.introduction h1 {
 		font-size: 2.2em;
-		margin-top: 4%;
+		margin-top: 14%;
 	}
 
 	.introduction h4 {
@@ -969,7 +969,7 @@ iframe {
 /* styling the Second section of the page */
 #Features {
 	justify-content: center;
-	height: 150vh;
+	height: 100vh;
 	width: 100%;
 }
 
@@ -1023,7 +1023,7 @@ iframe {
 }
 
 .pricebox {
-	width: 90%;
+	width: 70%;
 	height: 100%;
 	text-align: center;
 	margin-right: 1%;
@@ -1047,14 +1047,16 @@ iframe {
 
 /* footer section */
 .endsection {
-	height: 180%;
+	height: 100%;
 	display: flex;
 	width: 100%;
+	align-items: center;
 }
 
 .endsection p {
-	margin-top: 8%;
+	margin-bottom: 5%;
 	font-size: 1.3em;
+	align-self: center;
 }
 
 
@@ -1064,7 +1066,7 @@ iframe {
 
 	/* Header and navigation */
 	.container {
-		height: 65%;
+		height: 50vh;
 		width: 100%;
 	}
 
@@ -1115,7 +1117,7 @@ iframe {
 	/* introduction */
 	.introduction h1 {
 		font-size: 1.9em;
-		margin-top: 4%;
+		margin-top: 14%;
 	}
 
 	.introduction h4 {
@@ -1142,7 +1144,7 @@ iframe {
 	/* styling the Second section of the page */
 	#Features {
 		justify-content: center;
-		height: 80vh;
+		height: 40vh;
 		width: 100%;
 	}
 
@@ -1201,8 +1203,8 @@ iframe {
 	}
 
 	.pricebox {
-		width: 70%;
-		height: 100%;
+		width: 60%;
+		height:70%;
 		text-align: center;
 		margin-right: 1%;
 	}
@@ -1225,7 +1227,7 @@ iframe {
 
 	/* footer section */
 	.endsection {
-		height: 180%;
+		height: 100%;
 		display: flex;
 		width: 100%;
 	}
