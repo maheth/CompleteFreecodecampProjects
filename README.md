@@ -10,4 +10,5 @@ This project will have all the projects completed for freecodecamp
 
 * To view the Technical Documentation Page [click here](https://maheth.github.io/CompleteFreecodecampProjects/ProductDocumentation/index.html) 
 
-* Working on the portfolio page
+* Working on the portfolio page - page in development 
+
