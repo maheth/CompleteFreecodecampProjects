@@ -1,0 +1,225 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/* Color Variables */
+:root {
+    --odd-bluegray: #EEF0F5;
+    --blacky: #211520;
+    --bluish: rgba(44, 37, 247, 0.726);
+}
+
+/* CSS styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Nunito, sans-serif;
+    background: var(--odd-bluegray);
+}
+
+#navbar {
+    width: 100%;
+    background: var(--bluish);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+#navbar li a {
+    color: var(--odd-bluegray);
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar li a:hover {
+    text-decoration: underline;
+    padding: 1%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Welcome section styles */
+#welcome-section {
+    height: 55vh;
+    padding-top: 25vh;
+    padding-bottom: 20vh;
+    
+}
+
+#welcome-section h1 {
+    font-size: 5em;
+    color: var(--blacky);
+    font-weight: bold;
+    text-align: center;
+}
+
+#welcome-section h3 {
+    font-size: 2.5em;
+    margin-top: -5%;
+    text-align: center;
+}
+
+#contact {
+    font-size: 4em;
+}
+
+#profile-link,
+#behance,
+#twitter {
+    color: var(--blacky);
+}
+
+/* Detail section styles */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    grid-gap: 10%;
+    justify-content: center;
+    margin: 10%;
+}
+
+#aboutme p {
+    font-size: 2em;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.project-tile img {
+    width: 100%;
+    height: auto;
+}
+
+.project-tile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 200px;
+    margin: 5%;
+    padding: 5%;
+    justify-content: center;
+    
+    background: var(--bluish);
+    color: var(--odd-bluegray);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.project-tile p {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* footer styles */
+footer {
+    background: var(--blacky);
+    color: var(--odd-bluegray);
+    font-size: 1.3em;
+}
+
+/* Mobile styles */
+/* @media all and (max-width: 1690px) {}
+
+@media all and (max-width: 1280px) {}
+
+@media all and (max-width: 980px) {} */
+
+@media all and (max-width: 736px) {
+
+    #welcome-section {
+        margin-bottom: -20vh;
+    }
+
+    #navbar li a {
+        font-size: 0.85em;
+    }
+
+    #projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    #welcome-section h1 {
+        font-size: 2.5em;
+    }
+
+    #welcome-section h3 {
+        font-size: 1.5em;
+    }
+
+    #contact {
+        font-size: 2.2em;
+    }
+
+    /* Detailed section */
+    #aboutme p {
+        font-size: 1em;
+        width: 100%;
+        position: relative;
+        
+    }
+
+    footer {
+    
+        font-size: 1em;
+        margin: 2%;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+    #welcome-section {
+        margin-bottom: -20vh;
+    }
+
+
+    #navbar li a {
+        font-size: 0.85em;
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+        grid-gap: 2%;
+    }
+
+    #welcome-section h1 {
+        font-size: 2.5em;
+    }
+
+    #welcome-section h3 {
+        font-size: 1.5em;
+    }
+
+    #contact {
+        font-size: 2.2em;
+    }
+
+    /* Detailed section */
+    #aboutme p {
+        font-size: 1em;
+        width: 100%;
+        
+    }
+
+    footer {
+    
+        font-size: 1em;
+        margin: 2%;
+    }
+}
